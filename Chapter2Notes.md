@@ -6,7 +6,7 @@ CS 102 Introduction to Programming Using C++
 - A variable is a name for a place in storage
 - There are various types of data
 - We will start with numeric data
-- The twp main data types for numeric data are
+- The two main data types for numeric data are
   - int, for integer data
   - double, for data with decimal points 
 
@@ -38,8 +38,8 @@ CS 102 Introduction to Programming Using C++
 - We use that to count things in C++ (think x++)  
 
 #### Creating Your Own Variables
-- Before using a variable, you musr create, or rather, define/declare a variable
-- Creating a cariable is simple
+- Before using a variable, you must create, or rather, define/declare a variable
+- Creating a variable is simple
   - Decide on its type (int, double, float?)
   - Give it a name which represents what it is
   - ```float price_per_gallon; ```  
@@ -51,7 +51,7 @@ CS 102 Introduction to Programming Using C++
 
 #### Constants
 - A constant is a variable whose value does not change
-- Use constatns so we can remove numbers from inside of programs 
+- Use constants so we can remove numbers from inside of programs 
 - Syntax, use capital letters to write the name of constants
 - For example:  
   ```const double PRICE_OF_COFFEE = 2.35;```  
@@ -59,7 +59,7 @@ CS 102 Introduction to Programming Using C++
 
 #### Readability
 - Readability = understandability
-- High readability is easily understoof by other programmers
+- High readability is easily understood by other programmers
 - Anything you can do to increase the readability of a program is good
 - Ways to have better readability: 
   - Inserting blank lines
@@ -75,21 +75,21 @@ CS 102 Introduction to Programming Using C++
   - Used for comments which take several lines
 
 #### Comments
-- Use comments to exlain what's going on in your program 
+- Use comments to explain what's going on in your program 
 - Explain every function except main()
 - Explain tricky, complex code with comments
 - Ask some else to take a look at your comments  
 
 #### I/O Manipulator
 - I/O = input or output
-- There is cin for inout, data from the keyboard and cout for outputs
-- fixed is an i/o manipulator
+- There is cin for input, data from the keyboard and cout for outputs
+- ```fixed``` is an i/o manipulator
 - Use ```#include <iostream>``` and ```#include <iomanip>``` to use I/O Manipulators  
 
 #### Floating Point Data
 - Floating data is often imprecise
   - For example, 0.2 as a decimal number is 0.001100110011... as a binary number
-  - Binary numebrs are numbers with 0s and 1s
+  - Binary numbers are numbers with 0s and 1s
   - All computer data is stored as binary numbers
 - The stored value will be very close to the actual value, but may not be exactly equal
   - For this reason, we do not usually ask if two floating point numbers are equal (we ask if they are close)  
@@ -147,10 +147,10 @@ CS 102 Introduction to Programming Using C++
 
 #### Casting
 - You are in full control of what your program does
-- You can fforce data to be any type in a calculation 
+- You can force data to be any type in a calculation 
 - Example: ```unit_price = (double) 10/3;```  
 - We just forced C++ to treat 10 as if it was a type of float
-- Calcluation worked as we had hoped
+- Calculation worked as we had hoped
 
 #### Writing Programs 
 - Understanding the problem
