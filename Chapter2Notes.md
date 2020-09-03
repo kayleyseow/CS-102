@@ -174,3 +174,30 @@ CS 102 Introduction to Programming Using C++
   - Or, if h = total number of hours, the pay is
     - $600 + $15*(h-40)*1.5
 - We also have some data to test if our program works  
+
+#### Strings
+- A string is another data type
+- To use strings, you need ```#include <string>```  
+- To store a value into a string, use quotation marks, like ```string name = "Harvey";```  
+- Concatenation
+  - This means appending one string onto the end of another
+  - You do this by using +, like ```full_name = first_name + " " + last_name;```   
+- Do we see a danger in toring a zip code as an int?
+  - Due to 0's in zip codes, zip codes like ```01234``` would be treated like ```1234```  
+  
+#### Functions
+- A function is a small program that does a task
+  - There are two types
+    - One sends back an answer
+    - The other type performs a task
+- So far, we know ```main()```  
+- Since its type is int, we need to return an integer answer  
+
+#### String Functions
+- C++ has several built-in string functions
+  - ```int name_len = name.length();```  
+    - stores the length of the string ```name``` into the variable ```name_len```  
+  - ```string new_string = old_string.substr(3,2)```  
+    - This creates a new string starting at character 3 in ```old_string``` and having length 2
+    - Character 3 is actually the fourth character in the string, since indexes start at 0  
+- String functions are summarized on page 60 in the textbook
