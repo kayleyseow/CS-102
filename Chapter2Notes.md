@@ -182,7 +182,7 @@ CS 102 Introduction to Programming Using C++
 - Concatenation
   - This means appending one string onto the end of another
   - You do this by using +, like ```full_name = first_name + " " + last_name;```   
-- Do we see a danger in toring a zip code as an int?
+- Do we see a danger in storing a zip code as an int?
   - Due to 0's in zip codes, zip codes like ```01234``` would be treated like ```1234```  
   
 #### Functions
