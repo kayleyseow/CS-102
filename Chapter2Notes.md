@@ -133,6 +133,11 @@ CS 102 Introduction to Programming Using C++
 #### More Math: Powers and Roots
 - To calculate use x^10, use pow(x,10)
 - Use sqrt() to calculate square root
+- To solve ax^2 + bx + c = 0 using the quadratic formula, use:
+  - ```x_1 = (–b + sqrt (b*b – 4*a*c)) / (2 * a);``` and ```x_2 = (–b – sqrt (b*b – 4*a*c)) / (2 * a);```  
+  - You could also use ```pow(b,2)```, but ```b*b``` is better  
+  - You could also use ```pow(?,0.5)```, but ```sqrt()``` is better  
+
 
 #### Calculations in C++
 - When C++ calculates, it follows the normal math order of operations
@@ -166,6 +171,23 @@ CS 102 Introduction to Programming Using C++
   - All work at least 40 hours
   - Paid time and a half for overtime (pay 1.5 times the normal rate)  
 
+#### Some Cases, for the task
+- For this example, we will assume employees earn $15 per hour
+- Case 1
+  - The employee works 45 hours
+  - Then the regular rate of pay is used for the first 40 hours
+    - This is $15*40 = $600
+  - The employee also earns $15*5*1.5 for overtime
+    - This is $112.50
+  - The total pay is $600 + $112.50, which is $712.50
+- Case 2
+  - The employee works 50 hours
+  - Then the regular rate of pay is used for the first 40 hours
+    - This is $15*40 = $600
+  - The employee also earns $15*10*1.5 for overtime
+    - This is $225
+  - The total pay is $600 + $225, which is $825
+
 #### The Value of Studying Cases
 - Since we worked through some cases, we now know hot to write the program 
 - The total pay is 
@@ -184,7 +206,14 @@ CS 102 Introduction to Programming Using C++
   - You do this by using +, like ```full_name = first_name + " " + last_name;```   
 - Do we see a danger in storing a zip code as an int?
   - Due to 0's in zip codes, zip codes like ```01234``` would be treated like ```1234```  
-  
+
+#### More String Ideas
+- You can read a string with cin
+  - For example: ```cin >> street_address;```
+  - This is just like reading anything
+- However, this reads only one word
+  - You must use multiple cins to read multiple words
+
 #### Functions
 - A function is a small program that does a task
   - There are two types
