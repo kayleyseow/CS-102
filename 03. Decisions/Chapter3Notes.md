@@ -73,7 +73,7 @@ CS 102 Introduction to Programming Using C++
   
 #### Legal, but usually a logic error
 - The ```if``` part of the ```if``` statement itself should not get a semicolon 
-- This is perfectly legal, but it usually is not intentional 
+- This is perfectly legal, but it usually is not intentional — take a look at the code below:
   ```
   double service_charge = 0.00;
   if (account_balance < 0.00); //the semicolon ends the if  
