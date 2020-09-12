@@ -11,4 +11,3 @@ int main() {
         << "\nAverage: " << (a + b) / 2
         << '\n';
 }
-
