@@ -230,3 +230,4 @@ CS 102 Introduction to Programming Using C++
     - This creates a new string starting at character 3 in ```old_string``` and having length 2
     - Character 3 is actually the fourth character in the string, since indexes start at 0  
 - String functions are summarized on page 60 in the textbook
+
