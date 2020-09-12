@@ -19,4 +19,3 @@ int main()
 	cout << "The average of the two integers: " << (i1 + i2)/2 << endl;
 	return 0;
 }
-
