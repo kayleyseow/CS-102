@@ -16,3 +16,4 @@ int main() {
     string after = number.substr(numlength - 3, 3);
     cout << before + after + "\n";
 }
+
