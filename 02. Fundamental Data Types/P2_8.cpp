@@ -15,3 +15,4 @@ int main() {
         << "\nDiagonal: " << sqrt(pow(length, 2) + pow(width, 2))
         << '\n';
 }
+
