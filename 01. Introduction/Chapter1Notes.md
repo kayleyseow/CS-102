@@ -173,4 +173,3 @@ int main ()
     - Usually, comments explain routines or tricky code
   - Comments have no rules
     - You can write in “plain English”
-
