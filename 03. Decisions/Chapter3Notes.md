@@ -18,7 +18,7 @@ CS 102 Introduction to Programming Using C++
 - A rectangle indicates a task
   - It can be a single statement or several statements
   - Remember to write what your code does, NOT the actual code itself in the rectangle
-- A non-rectangular paralellogram indicates i/o
+- A non-rectangular parallelogram indicates i/o
   - For example, ```cin``` or ```cout```  
 - A diamond indicates a decision
   - It should be followed by a yes and no, or some decision
@@ -126,7 +126,7 @@ CS 102 Introduction to Programming Using C++
 
 #### Comparing Floating Point Numbers  
 - Comparing floating point numbers
-  - <, >, <=, >= are okay
+  - ```<```, ```>```, ```<=```, ```>=``` are okay
   - We never ask if two floating point numbers are equal
     - Because of round-off errors, they could be really, really close
     - Effectively, they are equal
@@ -188,7 +188,7 @@ CS 102 Introduction to Programming Using C++
   - The last ```else``` is a "catch-all"
     - It catches anything that is still left
   - If the last ```else``` were an ```else if```, it’s possible that all cases of the ```if``` would be skipped
-  - Good programming practice (Read this as “something that increases readability”) is to comment the last ```else```
+  - Good programming practice (Read this as “something that increases readability”) is to comment the last ```else```  
     For example: ```else  /*  if (grade >= 0   &&   grade < 60)  */```
 
 #### Nested ```if```s
