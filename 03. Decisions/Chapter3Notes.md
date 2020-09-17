@@ -390,3 +390,70 @@ AND
 #### The ```switch``` Statement
 - The ```switch``` is like a multi-way if
 - It only allows something that evaluates to an integer to control a choice
+
+#### An Example with the ```if``` Statement
+Example code with if statements to match employee codes to employee:
+```
+if (employee_code == 1)
+{
+  cout << “CEO”;
+}
+else if (employee_code == 2)
+{
+  cout << “Department Manager”;
+}
+else if (employee_code == 3)
+{
+  cout << “Programmer”;
+}
+else
+{
+  cout << “Invalid code”;
+}
+```  
+
+#### An Equivalent ```switch``` Statement
+Example code that does the same thing as the series of if statements above:
+```
+switch(employee_code)
+{ // other brackets are optional, but must have this pair of braces
+//order is switched to 3 then 2 then 1 because other way around is deceptive
+case 3: // equivalent to if (employee_code ==3)
+  cout << “Programmer”;
+  break;
+case 2: 
+  cout << “Department Manager”;
+  break;
+case 1:
+  cout << “CEO”;
+  break;
+else
+  cout << “Invalid code”;
+  //do not need a break here because it is at the end of the cases
+}
+```  
+Above code, except with braces included:
+```
+switch(employee_code)
+{ 
+  case 3:
+  {
+    cout << “Programmer”;
+    break;
+  }
+  case 2: 
+  {
+    cout << “Department Manager”;
+    break;
+  }
+  case 1:
+  {
+    cout << “CEO”;
+    break;
+  }
+  else
+  {
+    cout << “Invalid code”;
+  }
+}
+```
