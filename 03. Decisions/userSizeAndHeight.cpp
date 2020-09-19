@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+using namespace std;
 int main() {
   char userSize;
   cin >> userSize;
