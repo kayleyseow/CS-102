@@ -1,3 +1,4 @@
+// Kayley Seow
 int main() {
     double tempVal; 
     string tempType;
