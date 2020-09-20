@@ -1,5 +1,6 @@
 // Kayley Seow
 // 9/19/2020
+// Lab 3
 int main() {
     double tempVal; 
     string tempType;
