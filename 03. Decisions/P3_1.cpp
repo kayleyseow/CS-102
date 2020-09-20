@@ -1,4 +1,5 @@
 // Kayley Seow
+// 9/19/2020
 int main() {
     double tempVal; 
     string tempType;
