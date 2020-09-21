@@ -25,3 +25,4 @@ int main() {
     else if (number < 1000000000) cout << "This number has 8 digits.\n";
     else if (number < 10000000000) cout << "This number has 9 digits.\n";
     else cout << "This number has 10 digits.\n";
+}
