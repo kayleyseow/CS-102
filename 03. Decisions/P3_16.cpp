@@ -1,5 +1,6 @@
 // Kayley Seow
 // 9/20/2020
+// Lab 3
 #include <iostream>
 #include <string>
 using namespace std;
