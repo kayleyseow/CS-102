@@ -1,3 +1,8 @@
+// Kayley Seow
+// 9/21/2020
+// Lab 3
+// P3.25, This program asks the user for a year and computes whether that year is a leap year.
+
 #include <iostream>
 #include <string>
 using namespace std;
