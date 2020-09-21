@@ -21,3 +21,4 @@ int main() {
     paycheck = (salary * hours) + overtime;
     cout << name << "'s paycheck: \n" << name << " earned " << paycheck << endl;
 }
+
