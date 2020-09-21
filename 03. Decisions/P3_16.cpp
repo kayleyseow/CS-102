@@ -1,6 +1,7 @@
 // Kayley Seow
 // 9/20/2020
 // Lab 3
+// P3.16, This program computes the pay and prints a check for the employee.
 #include <iostream>
 #include <string>
 using namespace std;
