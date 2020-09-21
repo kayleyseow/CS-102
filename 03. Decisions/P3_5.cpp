@@ -1,7 +1,7 @@
 // Kayley Seow
 // 9/20/2020
 // Lab 3
-// P3.5, This programm reads an integer and prints how many digits the number has, by checking whether the number is ≥ 10, ≥ 100, and so on.
+// P3.5, This programm reads an integer and prints how many digits the number has, by checking whether the number is >= 10, >= 100, and so on.
 
 #include <iostream>
 #include <string>
@@ -9,7 +9,7 @@ using namespace std;
 
 int main() {
     int number;
-    cout << "Enter a number ≥ -1,000,000,000 and ≤ 1,000,000,000\n";
+    cout << "Enter a number >= -1,000,000,000 and <= 1,000,000,000\n";
     cin >> number;
     if (number < 0)
     {
