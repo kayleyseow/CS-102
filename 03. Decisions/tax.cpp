@@ -1,4 +1,4 @@
-// Practice with if else statement structures 
+//Practice with if else statement structures 
 #include <iostream>
 #include <string>
 using namespace std;
