@@ -1,4 +1,4 @@
-// Practice with switch statements
+//Practice with switch statements
 #include <iostream>
 using namespace std;
 
