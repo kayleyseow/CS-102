@@ -1,4 +1,4 @@
-// Practice comparing doubles using EPSILON
+//Practice comparing doubles using EPSILON
 #include <iostream>
 #include <string>
 using namespace std;
