@@ -27,3 +27,10 @@ CS 102 Introduction to Programming Using C++
   - A non-rectangular parallelogram indicates input or output
   - A diamond indicates a decision
   - Also, there are usually start and end symbols
+
+#### The boolean data type  
+- A ```bool``` variable can store either ```true``` or ```false```  
+- Boolean variables frequently get their values as a result of a comparison
+- Quick side note: booleans can be used in numerical equations
+  - ```false``` is equal to ```0```  
+  - ```true``` is equal to ```1```  
