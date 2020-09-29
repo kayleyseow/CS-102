@@ -130,3 +130,108 @@ This code below demonstrates how to use a ```for``` loop
   - Readability
   - More options for increments
   - Does not use as many lines
+
+#### Focusing on that Character Type
+- The type is ```char```
+- You use single quotes (like ') for ```char``` data
+  - ```char first_initial = 'K';```
+- Don't forget
+  - Use double quotes, like " for ```string``` data
+
+#### The ```string``` Type vs. the ```char``` Type
+```
+string name;
+name = "Harry";
+```
+- The ```string``` requires extra memory to keep track of where it ends
+```
+char middle_initial;
+middle_initial = 'T";
+```
+
+#### The ```string``` Type vs. the ```char``` Type Part 2  
+- A ```string``` is just a list of characters
+We can code it like this:
+```
+string song = "By the Beautiful Blue Danube";
+int num_caps = 0;
+for (int i = 0; i<song.length(); i++)
+{
+  if (song [i] >= 'A' && song [i[ <= 'Z')
+    num_caps++;
+}
+```
+
+#### Pre-Test Loops Again 
+- The ```for``` loop is another example of a pre-test loop
+- The condition is checked before the loop is run 
+- As with the ```while``` loop, this loop can be skipped (not executed at all)
+- This is useful for counting items
+
+#### Counting Items
+- You read in several items with a ```while``` loop
+- You process them with a ```for``` loop
+- What if there are no items to process?
+  ```
+  int last = -1;
+  for (int i = 0; i<last;i++)
+  {
+    ...// Lots of lines deleted here
+  }
+
+#### A Third Type of Loop
+- This is the ```do``` loop
+- It merrily goes its way and then checks for the condition at the end
+- An example is 
+  ```
+  int i = 1;
+  do
+  {
+    cout << i << endl;
+    i++
+  }
+  while (i<10);
+  ```
+
+#### A Post-Test Loop
+- Obvious from layout of the code
+- ```do``` loop is a post-test loop
+- The condition is tested after the body of the loop is run 
+  - The body of a loop (any loop) is the code that is run on each iteration of the loop
+- This means the ```do``` loop always iterates at least once
+
+#### An Example of a Post-Test Loop
+  ```
+  int i = -1;
+  do
+  {
+    cout << i << endl;
+    i++
+  }
+  while (i>0);
+  ```
+#### Input Validation 
+- A good use of a post-test loop is input validation:  
+  ```
+  int value;
+  do
+  {
+    cout << "Enter a non-negative integer: ";
+    cin >> value;
+  }
+  while (value <0);
+  ```
+  
+#### Validating Input with a ```while``` Loop
+- Let's try this with a ```while``` loop
+- Why won't similar code work? 
+- How would we have to change it? 
+  ```
+  int value;
+  while (value <0)
+  {
+    cout << "Enter a positive integer: ";
+    cin >> value;
+  }
+  ```
+  - Remember to have a ```cout``` before a ```cin```, so the user knows to enter something in
