@@ -40,3 +40,7 @@ CS 102 Introduction to Programming Using C++
 - Know about and (```&&```), or (```||```), and not (```!```)  
 - Know what short-circuit ```if``` logic is  
   - From [stackoverflow](https://stackoverflow.com/questions/9344305/what-is-short-circuiting-and-how-is-it-used-when-programming-in-java): Short-circuit evaluation means that when evaluating boolean expressions (logical ```&&``` and ```||```) you can stop as soon as you find the first condition which satisfies or negates the expression.  
+
+#### Input Validation
+- Input data should always be validated
+- A common problem is that when people enter data, they make mistakes
