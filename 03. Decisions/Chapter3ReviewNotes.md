@@ -44,3 +44,72 @@ CS 102 Introduction to Programming Using C++
 #### Input Validation
 - Input data should always be validated
 - A common problem is that when people enter data, they make mistakes
+
+#### Input Failure
+- ```if(cin.fail())``` stop the program 
+
+#### The ```switch``` statement 
+- Know how to code it
+An example using switch statements:
+```
+int main()
+{
+	int digit;
+	cout << "Enter a digit between 1 and 10: \n";
+	cin >> digit;
+	switch (digit)
+	{
+	case 1:
+	{
+		cout << "one\n";
+		break;
+	}
+	case 2:
+	{
+		cout << "two\n";
+		break;
+	}
+	case 3:
+	{
+		cout << "three\n";
+		break;
+	}
+	case 4:
+	{
+		cout << "four\n";
+		break;
+	}
+	case 5:
+	{
+		cout << "five\n";
+		break;
+	}
+	case 6:
+	{
+		cout << "six\n";
+		break;
+	}
+	case 7:
+	{
+		cout << "seven\n";
+		break;
+	}
+	case 8:
+	{
+		cout << "eight\n";
+		break;
+	}
+	case 9:
+	{
+		cout << "nine\n";
+		break;
+	}
+	case 10:
+	{
+		cout << "ten\n";
+		break;
+	}
+	default: cout << "invalid number\n";
+	}
+}
+```
