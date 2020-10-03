@@ -46,7 +46,12 @@ The program below uses a ```while``` loop
 #### Variables
 - This statement appears inside the loop:
   ```double interest = balance*RATE/100;```  
--  
+- It creates the double variable interest
+- Since the variable is declared inside the loop, it is actually recreated each time through the loop
+- One time through the loop is called an iteration
+  - The variable is recreated on each iteration
+- Variable destroyed after the loop
+  - As if the variable was never declared
 
 #### Loop Exercise
 Find the logic error in the code below:
@@ -91,6 +96,9 @@ Find the logic error in the code below:
   - loop prints all integers from 1 to upper_limit -1
 
 #### A Pre-Test Loop
+- The ```while``` loop is an example of a pre-test loop
+  - The condition is checked before the code in the loop is run
+- This means that the loop can be skipped entirely!
 
 #### Example of a Pre-Test Loop
 Below is an example of a loop with a pre-test:
@@ -105,6 +113,9 @@ Below is an example of a loop with a pre-test:
 - In the code, you are just checking to see how the pretest, ```while (i<10)``` checks the integer
 
 #### A Second Type of Loop
+- Another type of loop is the for loop
+- The ```for``` loop counts
+  - It is sometimes called a counter-controlled loop
 
 #### An Example of a ```for``` Loop
 This code below demonstrates how to use a ```for``` loop
@@ -131,12 +142,47 @@ This code below demonstrates how to use a ```for``` loop
   - More options for increments
   - Does not use as many lines
 
+#### Counting Up, Counting Down
+- The ```for``` loop can count in many ways
+- Counting Up
+  - An example of using ```for``` loops to count up:
+  ```
+  for (int i=2;  i<11;  i=i+2)
+  {
+    cout << i << endl;
+  }
+
+  for (int i=10;  i<51;  i=i+10)
+  {
+    cout << i << endl;
+  }
+  ```
+- Counting Down
+  - An example of using ```for``` loops to count down:
+  ```
+  for (int i=10;  i>0;  i– –)
+  {
+    cout << i << endl;
+  }
+
+  for (int i=51;  i>0;  i=i-10)
+  {
+    cout << i << endl;
+  }
+  ```
+
+#### C++ Has a Character Type
+- C++ has a type that can hold a single character
+  - A ```string``` can certainly do this, but it stores data in a different way
+  - The ```string``` is more wasteful for storing a single character
+
 #### Focusing on that Character Type
 - The type is ```char```
 - You use single quotes (like ') for ```char``` data
   - ```char first_initial = 'K';```
 - Don't forget
-  - Use double quotes, like " for ```string``` data
+  - Use double quotes, (like ") for ```string``` data
+  - ```string first_name = "Kayley";```
 
 #### The ```string``` Type vs. the ```char``` Type
 ```
@@ -157,7 +203,7 @@ string song = "By the Beautiful Blue Danube";
 int num_caps = 0;
 for (int i = 0; i<song.length(); i++)
 {
-  if (song [i] >= 'A' && song [i[ <= 'Z')
+  if (song [i] >= 'A' && song [i] <= 'Z')
     num_caps++;
 }
 ```
@@ -182,7 +228,7 @@ for (int i = 0; i<song.length(); i++)
 #### A Third Type of Loop
 - This is the ```do``` loop
 - It merrily goes its way and then checks for the condition at the end
-- An example is 
+- An example is:  
   ```
   int i = 1;
   do
