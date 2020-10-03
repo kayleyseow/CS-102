@@ -1,0 +1,240 @@
+﻿//Gary Han, Kayley Seow, David Pan, Sushruth Booma
+//Period 1
+//October 1, 2020
+==============================     PART 1     ==============================
+   string str, str1, str2;
+
+   cout << "Please type a string: ";
+   //  Lines that read in a string were deleted
+   //  Those lines are able to read in any string, even one containing spaces
+
+
+//  Loop 1:  What is printed?
+   for (int i=str.length()-1;  i>=0;  i--)
+   {
+      cout << str [i]; 
+   }
+   cout << endl;
+   //Prints the entire string but backwards
+
+
+//  Loop 2:  What is printed?
+   for (int i=str.length()-1;  i>=0;  i--)
+   {
+      cout << str [i] << str [i]; 
+   }
+   cout << endl;
+   //Prints the string backwards but each character is printed twice
+
+//  Loop 3:  What is printed?
+   for (int i=0;  i<str.length();  i++)
+   {
+      cout << " " << str [i];  
+   }
+   cout << endl;
+   //prints the string with spaces in between each character but starts out with an initial space
+
+//  Loop 4:  What is printed?
+   for (int i=0;  i<str.length();  i++)
+   {
+      cout << str [i] << " ";
+   }
+   cout << endl;
+   //prints the string with spaces in btween each character but ends with an extra space
+
+//  Loop 5:  What is printed?
+   for (int i=0;  i<str.length();  i+=2)
+   {
+      cout << str [i] << " "; 
+   }
+   cout << endl;
+   //prints every other character with space after each character
+
+
+
+
+
+
+//  Loop 6:  What does the variable "count" contain after the loop?
+   int count = 0;
+   for (int i=0;  i<str.length();  i++)
+   {
+      if (str [i] >= 'A'  &&  str [i] <= 'Z') HelLO
+          count++;
+   }
+   //3
+
+//  Loop 7:  What makes the variable "found" true?
+   bool found = false;
+   str2 = "hello";
+   int i=0;
+   while (!found  &&  i <= str.length()-str2.length())
+   {
+      if (str.substr(i, str2.length()) == str2)
+      {
+         found = true;
+      }
+      else
+      {
+         i++;
+      }
+   }
+   //
+
+//  Loop 8:  What is printed?
+   cout << "Please type your name (first and last, separated by a space): ";
+   //  Lines to read in the name  (These lines are omitted.)
+   //  Lines to validate format of name (These lines are also omitted.) Gary Han
+   bool found = false;
+   int i=0;
+   while (!found  &&  i < str.length())
+   {
+      if (str [i] == ' ')
+      {
+         found = true;
+      }
+      else
+      {
+         i++;
+      }
+   }
+   str1 = str.substr(i, str.length ()-i);
+   str2 = str.substr(0, i);
+   cout << str1 << ", " << str2 << endl;
+   // First, Last
+
+
+
+
+
+==============================     PART 2     ==============================
+
+Exercise 1.  Write a loop to read numbers.  Each number should be a
+positive integer.  Print each number as it is read.  Exit the loop
+when the user types an invalid value.
+
+int number;
+do
+{
+   cout << "Enter a postive number: ";
+   cin >> number;
+   if (number > 0)
+   {
+      cout << number << endl;
+   }
+   
+} 
+while (number <= 0);
+
+
+
+
+Exercise 2.  Write a loop to read in an (integer) part number.  Print
+out “Order 50 parts.  Part number is _____”  Put the number you
+read in the blank.  Exit the loop when the user types an invalid
+value, which is a number smaller than 1000 or greater than 9999. 
+(Each part number is a 4-digit value.)
+
+int part_number;
+do
+{
+   cout << "Input a part number: ";
+   cin >> part_number;
+   if (part_number < 9999 && part_number > 1000 )
+   {
+      cout << "Order 50 parts. Part number is " << part_number << endl;
+   }
+} 
+while (part_number > 1000 && part_number < 9999);
+
+
+Exercise 3.  The user will type in the name of a song, one letter per
+line.
+	a.)  Tell how many words are in the name of the song.  Hint:  The
+number of words is the same as one more than the number of spaces in
+the song name.
+
+    int word_count = 0;
+    string word;
+    cout << "put an * to exit" << endl;
+    while (word != "*")
+    {
+        cout << "Input word: ";
+        cin >> word;
+        word_count++;
+    }
+    word_count = word_count - 1;
+    cout << "Word Count: " << word_count << endl;
+
+	b.)  The user will type in the name of a song, one letter per line. 
+Tell if the name of the song contains the letter v.
+
+bool letterv = false;
+while (song_char != '*')
+{
+   cout << "input song character: ";
+   cin >> song_char;
+   if (song_char == 'v' || song_char == 'V')
+   {
+      letterv = true;
+   }
+}
+if (letterv == true)
+   cout << "Song name contains letter v" << endl;
+
+
+Exercise 4.  The user can type a code to insert, modify, or delete a
+record in our corporate database.  The codes are
+	1–Insert
+	2–Modify
+	3–Delete
+	4–Exit
+Read the code.  Then, if the code is not 4, ask for an integer record
+number and call the correct method.  If the code is 4, exit the
+program. Methods are insertRecord (recordNumber), modifyRecord
+(recordNumber), and deletetRecord (recordNumber).  The record number
+is an argument (and the only argument) for each method.  Code a loop
+to read and process choices until the user enters 4 (which exits the
+program.)
+
+int record_num;
+while (record_num != 4)
+{
+   cout << "Enter a number between 1-4: ";
+   cin >> record_num;
+   if (cin.fail())
+      cout << "Error Please put an integer between 1-4";
+   else if (record_num > 4 || record_num < 1)
+      cout << "Error Please put an integer between 1-4";
+   else if (record_num == 1)
+      insertRecord (recordNumber);
+   else if (record_num == 2)
+      modifyRecord (recordNumber);
+   else if (record_num == 3)
+      deletetRecord (recordNumber);  
+}
+
+Exercise 5.  You are writing a program to simulate a mouse running
+through a maze.  The mouse makes several steps.  (This is in a loop.)
+There are three Boolean variables, wallOnLeft, wallOnRight,
+wallAhead.  For each loop iteration, check the variables.  If
+wallOnLeft is false, call the method moveLeft.  Otherwise, if
+wallAhead is false, call moveAhead.  Otherwise, if wallOnRight is
+false, call moveRight.  Otherwise, call the method moveBack and then
+call then method turnRight.  After making a move, check if the
+boolean variable cheeseFound is true.  If so, exit the loop.  You can
+assume that, at the start of the loop, somehow the mouse makes a move
+and the boolean variables get set correctly.  You can put a comment
+at the start of the loop saying that.
+
+while (cheeseFound == false)
+{
+   if (wallOnLeft == false)
+      moveleft();
+   else if (wallOnRight == false)
+      moveright();
+   else if (wallAhead == false)
+      moveahead();
+   else
+      moveback();
+}
