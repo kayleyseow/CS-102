@@ -38,12 +38,17 @@ CS 102 Introduction to Programming Using C++
 #### A Look at a Function
 Here is an example of a function: 
 ```
-double_cube_volume (double side_length)// input is a double, output is a double as well
+double cube_volume (double side_length)// input is a double, output is a double as well
 {
   double volume = side_length*side_length*side_length;//the task of the cube, in this case, calculating the volume  
   return volume;//returns whatever you need from the function, in this case, the volume
 }
-```
+```  
+- Function name is ```double_cube_volume()```
+- Function will return a ```double```
+- Input is a ```double```
+- There is one input  
+- The function calculates the volume of a cube  
 
 #### Using the Function  
 - ```vol = cube_volume(3);```  
@@ -190,7 +195,7 @@ int total_cents (int dollars, int cents)
 - Test the function
 
 #### Keep Functions Short
-- All functions (including main() itself) should be short
+- All functions (including ```main()``` itself) should be short
   - Typically, this means the function's code must be no more than two or three screens long
 - A function should only do one task
 - If it does more than that, it should be redesigned
@@ -256,3 +261,10 @@ string shelve (string book)
 ```
 - We have to code stubs for every function
 - We are able to test the rest of the code, writing stubs guarantees that your code will compile
+
+#### The Scope of Variables
+- We already saw this before 
+- Scope means where a variable can be used
+- There is an interesting that can happen to variables when use functions
+  - Happens in regular code too
+  
