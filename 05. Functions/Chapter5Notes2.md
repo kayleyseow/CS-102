@@ -77,7 +77,6 @@ void duplicate_string(string str)
 
 #### Re-examining the Factorial Function 
 - Wait! The end of 10! is 9!
-  - 
 - We can say that ```nx(n-1)```
 
 #### Programming Factorials
@@ -89,7 +88,7 @@ int factorial (int n)
 ```
 
 #### Another Example: Fibonacci Numbers
-- The ffibonacci Numbers are a sequence of numbers
+- The fibonacci numbers are a sequence of numbers
   - First two numbers are both 1
   - After that, got o the next Fibonacci number, add the two before it
 - For example, the first seven numbers in the list are 1, 1, 2, 3, 55, 8, 13
