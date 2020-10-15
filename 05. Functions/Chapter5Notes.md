@@ -267,4 +267,19 @@ string shelve (string book)
 - Scope means where a variable can be used
 - There is an interesting that can happen to variables when use functions
   - Happens in regular code too
-  
+  - More common in functions
+- Happens with functions and their arguments too, so pay attention to that as well
+- It is called shadowing
+- An Example of Shadowing: 
+  ```
+  int i = 1--, posn = -1;
+  string str = "hello there";
+  for (int i = 0; posn<0 && i<str.length(); i++)
+  {
+    if (str[i] == ' ')//if character is a space
+      posn = i;//the variable got redeclared
+  }
+  cout << i << endl;
+  ```
+  ^ That was confusing, right?!
+  - 
