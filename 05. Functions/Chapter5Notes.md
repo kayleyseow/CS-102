@@ -213,6 +213,8 @@ int total_cents (int dollars, int cents)
 #### The Code
 - ```main()``` contains a loop that asks what should happen to the book 
 - User enters R, P, S, I, O, L
+- The code reads the user's choice into the character variable ```user_request```  
+- The code has a ```switch``` statement that processes the user's request
 
 #### The ```switch``` statement
 The code below is not good, it is very messy: 
@@ -245,6 +247,9 @@ switch (user_choice)
 #### Explaining the ```switch``` statement
 - Each line contains a function call
   - This version is more readable  
+- We have to write the functions
+- We would like to test our code after we write each individual function
+- To do this we create stubs which are minimal functions
 
 #### Some Stubs
 - Suppose we have written the code for ```request()``` and want to test it  
@@ -281,5 +286,22 @@ string shelve (string book)
   }
   cout << i << endl;
   ```
-  ^ That was confusing, right?!
-  - 
+  ↑ That was confusing, right?!
+  - there are two variables with the same name  
+    - The variable ```i``` is declared in Line 1
+    - The variable ```i``` is also declared in Line 3
+    - [Will the real ```i``` please stand up?](https://youtu.be/eJO5HU_7_1w?t=88)
+  - So basically this is not good
+  - We call this shadowing
+  - We say the variable ```i``` in the ```for``` loop shadows the variable ```i``` in the ```main()``` function
+
+#### Scope
+- The ```i``` declared in Line 1 is local to the function, that is:
+  - it belongs to the entire function
+  - and only to the function
+- The ```i``` in the for in Line 3 belongs only to the ```for```
+- When the ```for``` ends (Line 5), the variable ```i``` doesn’t exist anymore
+- This solves the mystery:
+  - The ```i``` in Lines 4 and 5 is the ```i``` declared in Line 3
+  - The ```i``` in Line 6 is the ```i``` declared in Line 1
+
