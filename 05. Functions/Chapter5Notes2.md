@@ -1,4 +1,4 @@
-## Chapter 5 Notes: Functions  
+## Chapter 5 Notes: Functions, Part 2  
 CS 102 Introduction to Programming Using C++  
 10/15/2020  
 
