@@ -32,7 +32,7 @@ CS 102 Introduction to Programming Using C++
 - To cause a function to use a reference parameter, you put & before the parameter
 
 #### Changing the Value of a Parameter Using Call-By-Reference
-Below is similar code to the example above; however, notice how there is a ```&``` after the ```int``` in the second one. We're using call-by reference this time.
+Below is similar code to the example above; however, notice how there is a ```&``` after the ```int``` in the second one. We're using call-by reference this time:
   ```
   void change(int& i)
   {
@@ -68,6 +68,7 @@ Below is similar code to the example above; however, notice how there is a ```&`
 - One reason is that you cannot call the ```change()``` function 
 
 #### Rewriting the Code to Return a Value
+The code has been rewritten to return a value:
 ```
 void change (int& i)
 {
@@ -82,6 +83,7 @@ int main ()
 ```
 
 #### Constant References
+The code below uses a constant reference:  
 ```
 void duplicate_string(string str)
 {
@@ -109,7 +111,7 @@ void duplicate_string(string str)
 - In C++ ```factorial (n) = n * factorial (n-1);```
 
 #### Programming Factorials
-- The code is (mostly)
+- The code is (mostly):
 ```
 int factorial (int n)
 {
@@ -165,7 +167,7 @@ int factorial (int n)
 - You used recursion!
 
 #### The Code
-- So the pseudocode is (mostly)
+- So the pseudocode is (mostly):
 ```
 void move_disks (int n, int start_pole, int spare_pole, int end_pole)
 {
