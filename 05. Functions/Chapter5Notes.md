@@ -254,7 +254,7 @@ switch (user_choice)
 #### Some Stubs
 - Suppose we have written the code for ```request()``` and want to test it  
 - We cannot because the program will not compile until we have every function 
-- So we code stubs
+- So we code stubs:
 ```
 void purchase (string book)
 {
