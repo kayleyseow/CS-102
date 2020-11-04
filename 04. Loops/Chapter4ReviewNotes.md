@@ -1,4 +1,4 @@
-## Chapter 3 Review Notes: Loop
+## Chapter 4 Review Notes: Loop
 CS 102 Introduction to Programming Using C++  
 10/2/2020  
 
