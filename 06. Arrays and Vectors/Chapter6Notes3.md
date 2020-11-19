@@ -119,11 +119,171 @@ CS 102 Introduction to Programming Using C++
 
 #### And Now for Something New: Vectors  
 - A vector is similar to an array
-- It can grow and shrink as needed
+- It can grow and shrink as needed, unlike a regular array
 - Because of this, it is more flexible than an array
-- To use it, you need to add
+- To use it, you need to add:  
   ```#include <vector>```
-- When declaring a vector, you have to use this syntax
-  ```vector <int> nums (10);```
+- When declaring a vector, you have to use this syntax:  
+  ```vector <int> nums (10);```  
+  - vector for vector
+  - inside the <> (diamond), you add in your data type
+  - name of the vector
+  - initialize the vector to a certain number
 - This creates a vector that can contain 10 integers
 - Notice that this looks different from declaring an ```int``` array
+- Vector versus java's arraylist: size of the vector can change, but it only adds and deletes from the end
+
+#### A Vector Can Be Treated Just Like an Array
+- A little snippet of code for a vector:
+	```
+	vector <int> nums (10);
+	for (int i=0;  i<10; i++)
+	{
+		cin >> nums [i];
+	}
+	int sum  = 0;
+	for (int i=0;  i<10;  i++)
+	{
+		sum += nums [i];
+	}
+	```
+
+#### Adding New Elements to a Vector
+- You can add items to a vector
+	- You use the ```push_back()``` function
+	- The added element goes to the end of the vector
+	```
+	vector <int> nums (10);
+	for (int i=0;  i<10; i++)
+	{
+		cin >> nums [i];
+	}
+	int sum  = 0;
+	for (int i=0;  i<10;  i++)
+	{
+		sum += nums [i];
+	}
+	nums.push_back (1000); 
+	```  
+	- The vector now has 11 items!
+
+#### Adding Elements to an Empty Vector
+It’s common to create an empty vector and add elements to it using ```push_back()```:  
+	```
+	vector <int> nums;
+	while (cin >> input)
+	{
+		nums.push_back (input);
+	}
+	```  
+	
+#### Removing Elements from a Vector  
+- There is a ```pop_back ()``` function
+- It is similar to the ```push_back ()``` function
+- It removes the last element from a vector
+
+#### Where Are We Now?
+- You create a vector
+- You add some elements
+- You remove some elements
+- You add some more elements
+- You lose track of how many elements are in the vector
+- What can you do?
+
+#### Determining the Size of a Vector
+- No worries! There is a ```size()``` function
+	```
+	vector <int> nums;
+	/*  Deleted lines
+	with many push_back and pop_back calls  */
+	for (int i=0;  i<nums.size();  i++)
+	{
+		cout << nums [i];
+	}
+	```  
+
+#### Using Vectors
+- You can use a vector element anywhere you can use any variable
+- You can print a vector element:  
+	```cout << nums [4];```
+- You can use it in a calculation:  
+	```
+	answer = 3 * nums [2] + 7;  
+	nums [6] = 12 + 16 * i;  
+	```  
+- You can use it as an argument to a function:  
+	```add_1_to_value (nums [5]);```
+
+#### Vectors vs. Arrays
+- Vectors are mostly like resize-able arrays
+- There is one important difference
+- If you pass an entire vector to a function, it is passed by value
+	- You cannot change it in the function
+- If you want to change it, you must pass it by reference:  
+	- ```new_function (vector<int>& nums)```  
+
+#### A Function Can Return a Vector!
+Here is a function that reads numbers into a vector and returns the vector:  
+	```
+	vector <int> read_nums ()
+	{
+		vector <int> temp_nums;
+		int input;
+		while (cin >> input)
+		{
+			temp_nums.push_back (input);
+		}
+		return temp_nums;
+	}
+	``` 
+
+#### Copying a Vector to a Vector
+- It is very easy to copy one vector to another
+- You simply copy it like you copy two ints:
+	```
+	vector <double> numbers;
+	//  Lots of deleted lines
+	vector <double> copy_of_numbers;
+	copy_of_numbers = numbers;
+	```  
+
+#### Finding Values That Meet Criteria
+- Suppose customer numbers are always in the range 1000-9999 (four digits long)
+- You have an array ```cust_nums [100]```
+	- It contains customer numbers
+- You would like to validate this array
+- One thing you can do is to keep track of all offending values in the  array
+##### Array Code to Find Values
+- This snippet of code uses an array to find values that meet criteria
+	```
+	int cust_nums [100];
+	int invalid [100];
+	int num_invalid = 0;
+	for (int i=0;  i<number_of_customers;  i++)
+	{
+		if (cust_nums [i] < 1000  ||  cust_nums [i] > 9999)
+		{
+			num_invalid++;
+			invalid [num_invalid] = cust_nums [i];
+		}
+	}
+	```
+##### Vector Code to Find Values
+- This snippet of code uses a vector to find values that meet criteria
+	```
+	int cust_nums [100];
+	vector <int> invalid;
+	for (int i=0;  i<number_of_customers;  i++)
+	{
+		if (cust_nums [i] < 1000  ||  cust_nums [i] > 9999)
+		{
+			invalid.push_back (cust_nums [i]);
+		}
+	}
+	```  
+
+#### Inserting and Deleting Elements from a Vector
+- This is very similar to inserting and deleting elements from an array
+- The difference is that now you can adjust the size of the vector using ```push_back()``` and ```pop_back()```
+- Very much like arrays, you can only insert and delete from the end of a vector
+- So, the code remains essentially the same
