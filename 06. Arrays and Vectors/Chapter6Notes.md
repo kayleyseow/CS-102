@@ -4,9 +4,9 @@ CS 102 Introduction to Programming Using C++
 
 #### An Array We Already Know  
 - This is something good to remember as we learn about arrays
-  - A string is a type of array
-- We have already coded a number of array ideas when we used strings
-- See if you can find the parallels to strings as we discuss arrays
+  - A ```string``` is a type of array
+- We have already coded a number of array ideas when we used ```string```
+- See if you can find the parallels to ```string``` as we discuss arrays
 
 
 #### Why Do We Need Arrays?  
