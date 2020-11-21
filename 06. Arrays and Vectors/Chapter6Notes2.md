@@ -133,7 +133,7 @@ CS 102 Introduction to Programming Using C++
 #### Changing an Array Itself: Inserting a Position
 - Again, an array cannot be changed
 - You also cannot insert a position into an array
-	- Suppose you have the array int scores[10];
+	- Suppose you have the array ```int scores[10];```
 	- You decide to insert a score after the fourth score
 	- You want the array to have positions  
 		0, 1, 2, 3, 3.5 maybe?, 4, 5, 6, 7, 8, 9
@@ -161,21 +161,21 @@ CS 102 Introduction to Programming Using C++
 - Again, the scenario is ```int scores[10];```  
 	- Again, you want to delete the third score
 - You can move the “bottom portion” of the array up to cover the third element
-- In this case, we move
-	scores [4] to scores [3]
-	scores [5] to scores [4]
-	etc. …
-	scores [9] to scores [8]
+- In this case, we move  
+	```scores [4]``` to ```scores [3]```  
+	```scores [5]``` to ```scores [4]```  
+	etc. …  
+	```scores [9]``` to ```scores [8]```  
 #### Deleting an Element from an Array Second Version
 - This code is for when order matters
 - This code will be very slow if you have a big array
 - Also, if you do this code often, it will slow down your program
 	- For example, if it’s in a loop
 		- This means that there are two loops here!
-		```
-		for (int i=3;  i<number_of_scores;  i++)
-		{
-			scores [i] = scores [i+1];
-		}
-		number_of_scores--;
-		```
+			```
+			for (int i=3;  i<number_of_scores;  i++)
+			{
+				scores [i] = scores [i+1];
+			}
+			number_of_scores--;
+			```
