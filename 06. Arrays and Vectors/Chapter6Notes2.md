@@ -122,4 +122,60 @@ CS 102 Introduction to Programming Using C++
 - Its main drawback is that it is not easily changed
   - The elements of the array can be changed
   - The array itself cannot be changed
-#### 15
+#### Changing an Array Itself: Deleting a Position
+- An array cannot be changed
+- You cannot delete a position from an array
+	- Suppose you have the array int scores[10];
+	- You want to delete the third score
+	- You want the array to have positions  
+		0, 1, 3, 4, 5, 6, 7, 8, 9, but not 2
+	- You cannot do this
+#### Changing an Array Itself: Inserting a Position
+- Again, an array cannot be changed
+- You also cannot insert a position into an array
+	- Suppose you have the array int scores[10];
+	- You decide to insert a score after the fourth score
+	- You want the array to have positions  
+		0, 1, 2, 3, 3.5 maybe?, 4, 5, 6, 7, 8, 9
+	- You cannot do this
+
+#### Actually Changing an Array
+- You can pretend to delete and insert
+- Deleting and inserting can be very slow if you have a big array
+- We will see code that deletes and inserts
+
+#### Deleting an Element from an Array First Version
+- Here is an easy and fast way to delete an element
+- It assumes the order of the elements in the array is not important
+	- A shopping cart is like this
+	- Anything you put in a pile is like this
+- If you don’t care about the order, you could simply move the last element into the soon-to-be empty spot:  
+	```
+	scores [2] = scores [number_of_scores-1];
+	```  
+- Then you have to decrement number_of_scores:  
+	```
+	number_of_scores--;
+	```
+#### Deleting an Element from an Array When Order Matters
+- Again, the scenario is ```int scores[10];```  
+	- Again, you want to delete the third score
+- You can move the “bottom portion” of the array up to cover the third element
+- In this case, we move
+	scores [4] to scores [3]
+	scores [5] to scores [4]
+	etc. …
+	scores [9] to scores [8]
+#### Deleting an Element from an Array Second Version
+- This code is for when order matters
+- This code will be very slow if you have a big array
+- Also, if you do this code often, it will slow down your program
+	- For example, if it’s in a loop
+		- This means that there are two loops here!
+		```
+		for (int i=3;  i<number_of_scores;  i++)
+		{
+			scores [i] = scores [i+1];
+		}
+		number_of_scores--;
+		```
