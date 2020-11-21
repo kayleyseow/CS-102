@@ -71,21 +71,21 @@ CS 102 Introduction to Programming Using C++
   - You want to know if one of the integers in ```nums``` is 17
     - You also want to know where 17 is, if it’s found
     - The value 17 is stored in the ```int``` variable ```search_value``` 
-    ```
-    int pos = 0;
-    bool found = false;
-    while (pos < number_of_items  &&  !found)
-    {
-      if (nums [pos] == search_value)
-      {
-        found = true;
-      }
-      else
-      {
-        pos++;
-      }
-    }
-    ```
+	    ```
+	    int pos = 0;
+	    bool found = false;
+	    while (pos < number_of_items  &&  !found)
+	    {
+	      if (nums [pos] == search_value)
+	      {
+		found = true;
+	      }
+	      else
+	      {
+		pos++;
+	      }
+	    }
+	    ```
 ##### Example 4: Copying an Array
 - To copy the array ```nums``` to the array ```copy_of_nums```, you cannot use:  
   ```copy_of_nums = nums;```
@@ -108,7 +108,7 @@ CS 102 Introduction to Programming Using C++
   ```
 - This second chunk of code prints out a comma after each element, but the last one (fenceposts):  
   ```
-	for (int i=0;  i<number_of_items-1;  i++)
+  for (int i=0;  i<number_of_items-1;  i++)
   {
     cout  <<  nums[i]  <<  “,”;
   }
