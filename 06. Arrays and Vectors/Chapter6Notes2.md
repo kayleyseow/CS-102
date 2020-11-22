@@ -178,4 +178,31 @@ CS 102 Introduction to Programming Using C++
 				scores [i] = scores [i+1];
 			}
 			number_of_scores--;
-			```
+			```  
+#### Inserting an Element into an Array First Version
+- Here is an easy and fast way to insert an element
+- Again, we might assume the order of the elements in the array is not important
+- If you don’t care about the order, you could simply insert the new item into the last spot:  
+	```scores [number_of_scores] = item;```  
+- Then you have to increment ```number_of_scores```:  
+	```number_of_scores++;```
+#### Inserting an Element Where It Belongs
+- Again, the scenario is ```int scores[10]```;
+- The elements of the array scores are sorted
+- For example, you might have entered your scores from smallest to largest
+- You can move the “bottom portion” of the array down to open up a spot for the new element
+- To insert a new element in position ```2```, we move  
+	```scores [8]``` to ```scores [9]```  
+	```scores [7]``` to ```scores [8]```  
+	etc. …  
+	```scores [2]``` to ```scores [3]```  
+- Now, you can insert your item in position ```2```:  
+	```scores [2] = item;```
+- Then you have to increment ```number_of_scores```:  
+	```number_of_scores++;```
+#### Inserting vs. Deleting
+- When you delete, you have to move the array up
+	- You start at the top and go down
+- When you insert, you have to move the array down
+	- You start at the bottom and go up
+- It’s important to do this the correct way
