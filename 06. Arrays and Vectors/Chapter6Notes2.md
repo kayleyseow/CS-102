@@ -215,7 +215,7 @@ CS 102 Introduction to Programming Using C++
 	```scores [3]``` goes to ```scores [2]```  
 - What could go wrong?  
 #### Moving the Other Direction--Inserting  
-- Let’s also try to insert by moving the array down, but start at the top
+- Let’s also try to insert by moving the array down, but start at the top  
 	```scores [2]``` goes to ```scores [3]```  
 	```scores [3]``` goes to ```scores [4]```  
 	etc. …  
