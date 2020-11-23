@@ -206,3 +206,24 @@ CS 102 Introduction to Programming Using C++
 - When you insert, you have to move the array down
 	- You start at the bottom and go up
 - It’s important to do this the correct way
+#### Moving the Other Direction-Deleting
+- What if you mix them up?
+- Let’s try to delete by moving the array up, but start at the bottom  
+	```scores [9]``` goes to ```scores [8]```  
+	```scores [8]``` goes to ```scores [7]```  
+	etc. …  
+	```scores [3]``` goes to ```scores [2]```  
+- What could go wrong?  
+#### Moving the Other Direction--Inserting  
+- Let’s also try to insert by moving the array down, but start at the top
+	```scores [2]``` goes to ```scores [3]```  
+	```scores [3]``` goes to ```scores [4]```  
+	etc. …  
+	```scores [8]``` goes to ```scores [9]```  
+- What could go wrong?  
+#### Side Issues
+- Both the insert and delete assume certain conditions
+- The delete operation assumes the item you are trying to delete is actually in the array
+	- Otherwise, you might try to delete from an empty array, or from a random position
+- The insert operation assumes that there is room in the array to insert a new element
+	- Otherwise, you have to “deny” the operation
