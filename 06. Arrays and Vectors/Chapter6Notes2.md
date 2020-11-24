@@ -227,3 +227,24 @@ CS 102 Introduction to Programming Using C++
 	- Otherwise, you might try to delete from an empty array, or from a random position
 - The insert operation assumes that there is room in the array to insert a new element
 	- Otherwise, you have to “deny” the operation
+#### Entering Data into an Array
+- You can read numbers into an array using a loop  
+- If you know you will fill the array, you can use a ```for``` loop:  
+	```  
+	for (int i=0;  i<10;  i++)  
+		cin >> nums[i];  
+	```  
+#### Entering Data into an Array If You Don’t Know How Many Input Items There Are
+- The code snippet below adds an input into the array as long as the user keeps on entering scores:  
+	```
+	int number_of_scores = 0;
+	while (cin >> input)
+	{
+	    scores [number_of_scores] = input;
+	    number_of_scores++;
+	}
+	```  
+	- ```while``` there is ```input``` from the ```cin```, it will be added to the ```scores``` array  
+	- After each new ```input``` is added, the ```int``` variable ```number_of_scores``` is incremented, as shown by the ```++```  
+- The textbook also checks that there is room in the array before adding
+- You should do that too!
