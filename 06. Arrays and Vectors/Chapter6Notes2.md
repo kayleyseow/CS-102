@@ -248,3 +248,23 @@ CS 102 Introduction to Programming Using C++
 	- After each new ```input``` is added, the ```int``` variable ```number_of_scores``` is incremented, as shown by the ```++```  
 - The textbook also checks that there is room in the array before adding
 - You should do that too!
+#### Sorting
+- Sorting is a painful operation because it takes a long time
+- That’s why there are several ways to sort
+- One easy sort to program is the selection sort
+- It’s pretty easy to code
+#### Swapping Two Data Items
+- Suppose you want to swap the values of variable ```a``` and ```b```
+- Why doesn’t this code work?
+	```
+	a = b;
+	b = a;
+	```
+	- When you set the value of ```a``` to ```b```, the value that ```a``` used to contain is lost
+- Instead, we do this: 
+	```
+	temp = a;	// Temporarily save a
+	a = b;		//  Copy b to a
+	b = temp;	//  Copy saved value of a to b
+	```
+	- By copying the value to ```temp```, you will not need lose the value that ```a``` previously stored
