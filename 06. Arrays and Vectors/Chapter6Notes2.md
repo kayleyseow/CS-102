@@ -268,3 +268,16 @@ CS 102 Introduction to Programming Using C++
 	b = temp;	//  Copy saved value of a to b
 	```
 	- By copying the value to ```temp```, you will not need lose the value that ```a``` previously stored
+#### The Function ```index_of_smallest()```
+- To simplify the process, I will create and use a function
+- I will call it ```index_of_smallest()```
+	- It will be an ```int``` function
+	- It will have two ```int``` arguments
+	- Function header:  
+		```int index_of_smallest (posn1, posn2)```
+- It will find and return the index of the smallest element among ```scores [posn1, posn1+1, …, posn2]```  
+#### A Function to Swap
+- I will also create the function:  
+	```void swap (int &a, int &b)```
+- It will swap the values of its two arguments
+- Notice the two ampersands (```&a``` & ```&b```)  
