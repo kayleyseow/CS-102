@@ -281,3 +281,22 @@ CS 102 Introduction to Programming Using C++
 	```void swap (int &a, int &b)```
 - It will swap the values of its two arguments
 - Notice the two ampersands (```&a``` & ```&b```)  
+#### The Selection Sort
+- The code snippet below is an implementation of selection sort:  
+	```
+	for (int i=0;  i<10;  ++i)  
+	{  
+		//  Find the index of the smallest element in  
+		//  scores [i+1, i+2, …, 9]  
+		smallest_posn = index_of_smallest (i, 9);  
+		//  Swap element smallest_posn with the ith element  
+			swap (scores [i], scores [smallest_posn]);  
+	}  
+	```  
+#### An Example
+- Let’s try this with a small array
+- The declaration is ```int nums = {7, 5, 9, 2, 8};```
+- There are many sorting algorithms
+- This is one of the slowest
+- You can look up quicksort
+	- It’s one of the fastest sorting algorithms
