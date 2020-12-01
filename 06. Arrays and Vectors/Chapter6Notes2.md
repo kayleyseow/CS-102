@@ -300,3 +300,51 @@ CS 102 Introduction to Programming Using C++
 - This is one of the slowest
 - You can look up quicksort
 	- It’s one of the fastest sorting algorithms
+#### The Binary Search
+- Searching and sorting are two of the most time consuming operations a computer can do
+- The linear search is the slowest search
+- A much faster search is the binary search
+	- It only works if the data is sorted
+- The binary search works by breaking the data into two halves
+- It finds which half the searched-for item appears in
+- It discards the other half and repeats the process
+#### Code for the Binary Search
+- To perform the search, we need to keep track of the left end and the right end
+- In the example, we are searching through the array ```nums```
+- We are searching for ```search_value```
+- size is the number of elements in the array nums
+#### The Code
+- The code for Binary Search:
+	```
+	bool found = false;
+	int low = 0;
+	int high = size - 1; 
+	int pos = 0;
+	while (low <= high  &&  !found)
+	{
+		pos = (low + high) / 2;
+		if (nums [pos] == search_value)
+		{
+			found = true;
+		}
+		else if (nums [pos] < search_value)
+		{
+	        	low = pos + 1;
+		}
+		else
+		{
+			high = pos - 1;
+		}
+	}
+	```
+- The code after the ```while``` loop for Binary Search
+	```
+	if (found)
+	{
+		cout << search_value << " found at position " << pos;
+	}
+	else
+	{
+		cout << search_value << " not found.  Insert before position “ << pos;
+	}
+	```  
