@@ -64,12 +64,12 @@ CS 102 Introduction to Programming Using C++
   ```int concert_hall [number_of_rows]  [number_of_columns];```
 - Notice that you need two pairs of brackets
 - You can also create and initialize a two-dimensional array:
-  ```
+  	```
 	int matrix [2] [3]= {
                       {1, 2, 3},
                       { 7, 9, 2} 
                       };
-  ```
+  	```
 - You do have to specify the dimensions
 - We do line the rows up like that
 
@@ -151,7 +151,7 @@ CS 102 Introduction to Programming Using C++
 #### Adding New Elements to a Vector
 - You can add items to a vector
 	- You use the ```push_back()``` function
-	- The added element goes to the end of the vector
+	- The added element goes to the end of the vector:  
 	```
 	vector <int> nums (10);
 	for (int i=0;  i<10; i++)
@@ -191,7 +191,7 @@ CS 102 Introduction to Programming Using C++
 - What can you do?
 
 #### Determining the Size of a Vector
-- No worries! There is a ```size()``` function
+- No worries! There is a ```size()``` function:  
 	```
 	vector <int> nums;
 	/*  Deleted lines
@@ -254,7 +254,7 @@ CS 102 Introduction to Programming Using C++
 - You would like to validate this array
 - One thing you can do is to keep track of all offending values in the  array
 ##### Array Code to Find Values
-- This snippet of code uses an array to find values that meet criteria
+- This snippet of code uses an array to find values that meet criteria:  
 	```
 	int cust_nums [100];
 	int invalid [100];
@@ -269,7 +269,7 @@ CS 102 Introduction to Programming Using C++
 	}
 	```
 ##### Vector Code to Find Values
-- This snippet of code uses a vector to find values that meet criteria
+- This snippet of code uses a vector to find values that meet criteria:  
 	```
 	int cust_nums [100];
 	vector <int> invalid;
