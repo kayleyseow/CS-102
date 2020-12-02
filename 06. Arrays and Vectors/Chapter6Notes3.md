@@ -223,7 +223,7 @@ CS 102 Introduction to Programming Using C++
 	- ```new_function (vector<int>& nums)```  
 
 #### A Function Can Return a Vector!
-Here is a function that reads numbers into a vector and returns the vector:  
+- Here is a function that reads numbers into a vector and returns the vector:  
 	```
 	vector <int> read_nums ()
 	{
