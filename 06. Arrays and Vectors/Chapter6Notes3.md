@@ -168,7 +168,7 @@ CS 102 Introduction to Programming Using C++
 	- The vector now has 11 items!
 
 #### Adding Elements to an Empty Vector
-It’s common to create an empty vector and add elements to it using ```push_back()```:  
+- It’s common to create an empty vector and add elements to it using ```push_back()```:  
 	```
 	vector <int> nums;
 	while (cin >> input)
