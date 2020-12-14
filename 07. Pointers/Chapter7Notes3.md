@@ -3,17 +3,17 @@ CS 102 Introduction to Programming Using C++
 12/14/2020
 
 #### Pointers on Their Own
-- When you use a pointer, it must already point to something
+- When you use a ```pointer```, it must already point to something
 - Until now, they always pointed to variables
 - New idea: They can point to other things, not just variables
-  - We can let our pointers point to a space in memory
+  - We can let our ```pointer```s point to a space in memory
   - This is a lot more flexible than the examples we have seen before
 
 #### Managing the Computer's Resources
 - Suppose you have five programs running
   - Word, a game, a browser, Windows Explorer, your C++ IDE or an editor
 - You click one of them
-- How should the program you click on know that you clicked on i?
+- How should the program you click on know that you clicked on it?
 - Should every program watch every mouse movement, every mouse click, every keystroke?
 
 #### The Operating System
@@ -53,8 +53,8 @@ CS 102 Introduction to Programming Using C++
   // Code should print 100
   // If you leave off the * of *int_ptr, will point to space in memory
   ```
-- It creates a pointer (using ```new```)
-  - The pointer is a pointer to an ```int```
+- It creates a ```pointer``` (using ```new```)
+  - The ```pointer``` is a ```pointer``` to an ```int```
 - It asks the OS for some memory
   - How much does it ask for?
   - How much does it get?
@@ -63,9 +63,9 @@ CS 102 Introduction to Programming Using C++
 
 #### A New Idea
 - Notice that this is an entirely new situation
-- There is no variable here that the pointer can get the address of and then point to
-- Instead, the pointer points off into memory
-- This is just a more-or-less random piece of memory fromt he program's view
+- There is no variable here that the ```pointer``` can get the address of and then point to
+- Instead, the ```pointer``` points off into memory
+- This is just a more-or-less random piece of memory from the program's view
   - The program thinks it was just some area of memory big enough to hold an ```int```
 - Of course, from the OS's point of view, 
 
@@ -77,7 +77,7 @@ CS 102 Introduction to Programming Using C++
 - The OS manages the heap
 
 #### Pointers Again
-- A pointer can point to anything, even a struct:
+- A ```pointer``` can point to anything, even a ```struct```:
   ```
   struct PersonInfo
   {
@@ -92,27 +92,27 @@ CS 102 Introduction to Programming Using C++
   ```
 
 #### Using the Pointer
-- ```Struct``` code snippet:  
+- ```struct``` code snippet:  
   ```
   Person_Info a_person;
   a_person.name = "Cay";
   ```  
-- To use the pointer, you first have to get some memory
+- To use the ```pointer```, you first have to get some memory
   - You do this with ```new```:  
     ```person_pts = new PersonInfo;```
 - Then you store some information into that memory:  
   ```person_ptr``` -> ```name = "Cay";```  
-  - Remember, the name member of the struct is a type of ```string```
+  - Remember, the name member of the ```struct``` is a type of ```string```
 
 #### A Dynamic Array
 - Why would you want to do that?
-- You have now created essentially, a dynamic array
-  - Of course, your array now has only one element
+- You have now created essentially, a dynamic ```array```
+  - Of course, your ```array``` now has only one element
 - Old facts:
   - An ```array``` cannot change it's size
   - If you wish to delete a location from an ```array```, you can't do that
     - You can fake it, though
-  - If you wish to insert a new location into an array, you can't do that either
+  - If you wish to insert a new location into an ```array```, you can't do that either
     - You can also fake this one too
 
 #### A New World
