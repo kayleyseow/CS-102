@@ -70,8 +70,8 @@ CS 102 Introduction to Programming Using C++
 - Of course, from the OS's point of view, 
 
 #### Dynamic Allocation
-- We say that the memory given tot he program was dynamically allocated
-  - It was obtained while the program was runnning
+- We say that the memory given to the program was dynamically allocated
+  - It was obtained while the program was running
 - This memory comes from a place called the heap
   - That's where the OS gets its spare memory from
 - The OS manages the heap
