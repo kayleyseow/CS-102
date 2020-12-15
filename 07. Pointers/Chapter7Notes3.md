@@ -67,7 +67,7 @@ CS 102 Introduction to Programming Using C++
 - Instead, the ```pointer``` points off into memory
 - This is just a more-or-less random piece of memory from the program's view
   - The program thinks it was just some area of memory big enough to hold an ```int```
-- Of course, from the OS's point of view, 
+- Of course, from the OS's point of view, it was the next available area in memory
 
 #### Dynamic Allocation
 - We say that the memory given to the program was dynamically allocated
