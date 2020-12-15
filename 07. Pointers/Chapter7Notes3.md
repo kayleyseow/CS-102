@@ -102,17 +102,40 @@ CS 102 Introduction to Programming Using C++
     ```person_pts = new PersonInfo;```
 - Then you store some information into that memory:  
   ```person_ptr``` -> ```name = "Cay";```  
-  - Remember, the name member of the ```struct``` is a type of ```string```
+  - Remember, the ```name``` member of the ```struct``` is a type of ```string```
+- You can also print it out:
+  ```cout << person_ptr -> city;```
 
 #### A Dynamic Array
 - Why would you want to do that?
 - You have now created essentially, a dynamic ```array```
   - Of course, your ```array``` now has only one element
 - Old facts:
-  - An ```array``` cannot change it's size
+  - An ```array``` cannot change its size
   - If you wish to delete a location from an ```array```, you can't do that
     - You can fake it, though
   - If you wish to insert a new location into an ```array```, you can't do that either
     - You can also fake this one too
 
 #### A New World
+- You now can create an "```array```" (of sorts) that does allow deletions and insertions
+- We call this idea a linked list
+  - A linked list is a kind of data structure
+- If you want your program to run faster, you probably need more memory
+
+#### Pursuing the Idea of a Dynamic 
+- This is called a linked list
+- Each of the items in the list is called a node
+- We need a ```pointer``` to the start of the list
+- Each node, then, points to the next node in the list
+
+#### Adding a Node at the Beginning of the List
+- You can add a node anywhere in the list
+- In your new node, have it point to the first original node in the list
+- Have the linked list point to the new node
+- Make sure to not lose the ```pointer``` to the original node in the list
+  - Point the ```pointer``` of the node you are trying to insert to the second node first
+  - *Then* you will be able to point the beginning to the node without losing anything
+
+#### Deleting a Node from the Beginning of the List
+- Have the ```pointer``` before it point to the next node in the linked list
