@@ -41,3 +41,28 @@ CS 102 Introduction to Programming Using C++
   - It’s frequently 4 or 8 bytes, but it doesn’t have to be
 - Then we can see why a ```pointer``` can be used as a reference to an ```array```
 - ```array [n]``` is truly at the same memory location as ```array + 4n```
+
+#### Problems from the Textbook to Check Our Knowledge
+- p. 317-318
+- Problems 6, 7, 8, 9
+- Do these to check on ```pointer``` arithmetic
+
+#### Using a ```pointer``` to Step through an ```array```
+- Two ways to print an ```array```
+- Assume ```int counts [10];```
+- Method 1:  
+  ```
+  for (int i=0; i<10; i++)
+  {
+    cout << counts [i] << endl;
+  }
+  ```  
+- Method 2:  
+  ```
+  int *p = counts;
+  for (int i=0; i<10; i++)
+  {
+    cout << *p << endl;
+    p++;
+  }  
+  ```  
