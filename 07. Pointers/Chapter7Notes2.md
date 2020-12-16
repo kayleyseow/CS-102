@@ -34,3 +34,10 @@ CS 102 Introduction to Programming Using C++
   - Your favorite ```int``` has to be less than 10 of course
 - This still works!
 - This equivalence is called the array/pointer duality law
+
+#### Why Does This Work?
+- Looking inside memory explains why this works
+- Suppose an ```int``` gets 4 bytes
+  - It’s frequently 4 or 8 bytes, but it doesn’t have to be
+- Then we can see why a ```pointer``` can be used as a reference to an ```array```
+- ```array [n]``` is truly at the same memory location as ```array + 4n```
