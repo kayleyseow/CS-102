@@ -10,7 +10,7 @@ CS 102 Introduction to Programming Using C++
     - We say the bytes are contiguous
 - So, it would seem that a ```pointer``` could be used to point to (or reference) various elements of an ```array```
 
-#### A Pointer to an Array
+#### A ```pointer``` to an ```array```
 - Suppose we have:  
   ```double costs [10];```
 - Then we can say:  
@@ -21,3 +21,16 @@ CS 102 Introduction to Programming Using C++
 - Which is the same as:  
   ```cout << costs [0];```
 - It’s even deeper than that!
+
+#### ```pointer``` Arithmetic
+- You can use ```pointer```s in lots of clever ways
+- One idea is called ```pointer``` arithmetic
+- Once again, assume:  
+  - ```double costs [10];```
+  - ```double* cost_pointer = costs;```
+- Then:  
+  ```*(cost_pointer+2) is the same as costs [2];```
+- Change 2 to your favorite ```int```
+  - Your favorite ```int``` has to be less than 10 of course
+- This still works!
+- This equivalence is called the array/pointer duality law
