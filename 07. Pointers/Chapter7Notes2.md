@@ -66,3 +66,83 @@ CS 102 Introduction to Programming Using C++
     p++;
   }  
   ```  
+
+#### More Advanced Use of ```++```, ```--```
+- The increment, decrement operators can occur inside of statements, not just on their own
+- For example, you can code:  
+  ```
+  int n = 10;
+  cout << n--;
+  ```
+- You can also code:  
+  ```
+  int n = 10;
+  cout << --n;
+  ```
+
+#### Following the Examples
+- This code:  
+  ```
+  int n = 10;
+  cout << n--;
+  ```
+  - prints 10 and then decrements ```n```.
+- This code:
+  ```
+  int n = 10;
+  cout << --n;
+  ```
+  - decrements ```n``` and then prints 9.
+
+#### Operators Before Variables, Operators After Variables
+- If an increment/decrement operator occurs _before_ the variable
+  - the increment/decrement is done _before_ the statement is executed
+- If an increment/decrement operator occurs _after_ the variable
+  - the increment/decrement is done _after_ the statement is executed
+
+#### Tracing Some Code
+What will print in the example below?  
+```
+int x, y;
+x = 1;
+cout << "x = " << x << endl;
+y = ++x   +   2;
+cout << "x = " << x << endl;
+cout << "y = " << y << endl;
+y = x++   +   2;
+cout << "x = " << x << endl;
+cout << "y = " << y << endl;
+```
+
+#### Tracing Code from the Textbook
+Here's a code snippet to trace:
+```
+double sum (double* a, int size)
+{
+  double total = 0;
+  while (size-- > 0)
+  {
+    total = total + *a++;
+  }
+  return total;
+}
+```  
+- Trace the code with:  
+  ```
+  double a [3] = {15, 10, 20};
+  sum (a,3);
+  ```  
+- What is in ```a``` at the end of the function call?
+- What does the function ```return```?
+
+#### A Second Example from the Textbook
+- Be careful when using ```pointers``` with local variables:  
+  ```  
+  double* firstlast (double a[], int size)  
+  {
+    double result [2];
+    result [0] = a [0];
+    result [1] = a [size-1];
+    return result;
+  }
+  ```
