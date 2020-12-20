@@ -202,11 +202,10 @@ CS 102 Introduction to Programming Using C++
     - ```delete``` the node at the start of the chain
     - Release the node’s memory
     - Return what was stored in the node
-
-#### That Last Function
-- The last function should be a function that prints the list
-- You can use the code that traverses a list
-  - You were going to memorize it after all :)
+  - Last function:
+    - The last function should be a function that prints the list
+    - You can use the code that traverses a list
+      - You were going to memorize it after all :)
 
 #### The ```main()``` Function
 - Your ```main()``` function should
