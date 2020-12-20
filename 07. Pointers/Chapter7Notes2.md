@@ -2,7 +2,7 @@
 CS 102 Introduction to Programming Using C++  
 12/10/2020
 
-#### ```arrays``` and ```pointers```
+#### ```array```s and ```pointer```s
 - Here is an idea from C itself
 - These are the key points
   - A ```pointer``` contains an actual memory address
