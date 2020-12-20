@@ -146,3 +146,32 @@ double sum (double* a, int size)
     return result;
   }
   ```
+
+#### C ```String```s
+- C++ has a kind of ```string``` that is a holdover from C itself
+  - C++ programmers call it a “C ```string```”
+- This ```string``` is just a character ```array``` that has a special character at the end
+  - The character is ```‘\0’```
+  - In fact, there are several ```‘\’``` codes
+  - That is the actual number ```0```
+  - It is not a real, printable character
+  - It’s called a ```null``` terminator
+
+#### Character ```Array```s
+- In C, the only way to find the end of a ```string``` was to search for ```‘\0’```
+- This made it easy to mismanage ```string```s
+- If you overwrote that character accidentally, your ```string``` would lose its end
+- This means that C programmers would actually manage the ```‘\0’``` in their programs!
+
+#### C vs. C++
+- In C++, we have the ```length()``` function
+- C has many different ```string``` functions that work with ```string```s
+- All those functions expect the ```null``` terminator at the end of the ```string```
+- Many of those functions make ```string``` software susceptible to hacking
+  - Code using those specific functions has to be rewritten
+
+#### C String Functions
+- Since C++ grew out of C, there are a lot of ```string``` functions from C in C++ code
+- You should check out the list on p. 324
+- Again, many of these are not safe, and are not used any more
+  - For example, ```strncpy(t, s, n)``` vs. ```strcpy(t, s)```
