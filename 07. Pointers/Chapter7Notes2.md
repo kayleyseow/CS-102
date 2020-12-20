@@ -175,3 +175,90 @@ double sum (double* a, int size)
 - You should check out the list on p. 324
 - Again, many of these are not safe, and are not used any more
   - For example, ```strncpy(t, s, n)``` vs. ```strcpy(t, s)```
+
+#### Storing Data
+- We know several data types
+  - Some are ```string```, ```int```, ```double```, ```bool```
+- We want to make a new type, one that is more general
+- We want to store more than one single data item
+- For example, we want to store a person’s ```name``` and ```address```
+  - We need to store these items: 
+    - The person’s name
+    - The street address
+    - The city
+    - The state
+    - The zip code
+
+#### Parallel ```Array```s
+- One way to store this would be using parallel ```array```s
+- This means we will have five ```array```s
+  - ```name```, ```street```, ```city```, ```state```, ```zipcode```
+  - They will all be ```string```s
+- Information for Person 1 will be in:  
+  ```name[0], street[0], city[0], state[0], zipcode[0]```  
+- Information for Person 2 will be in:  
+  ```name[1], street[1], city[1], state[1], zipcode[1]``` 
+
+#### A Problem
+- We have already seen variables used as subscripts
+- Sometimes people calculate subscripts
+- The subscript comes from a formula
+  - It’s not just a single variable
+- How are these ```array```s “held together”?
+- What’s to stop bad programming from associating ```name[0]``` with ```street[1]```?
+
+#### A Solution
+- A better idea would be to create a new ```array```
+  - Call it ```info[ ]```
+- We will store
+  - _all_ the information for Person 1 in ```info [0]```
+  - _all_ the information for Person 2 in ```info [1]```, etc.
+- How can we do this?
+
+#### Creating a ```struct```
+- First, we create a ```struct```
+- A ```struct``` is a way of grouping different data items together
+- An example is:  
+  ```
+  struct PersonInfo
+  {
+    string name;
+    string street;
+    string city;
+    string state;
+    string zip_code;
+  };
+  ```  
+
+#### Using a ```struct```
+- A struct is a type
+  - It’s just like ```int```, ```bool```, ```double```, etc.
+- Just like we can code:  
+  ```int number_of_items;```
+- we can code:  
+  ```PersonInfo a_person;```
+- We have created a new type!
+
+#### Accessing Parts of the ```struct```
+- We can set values into the ```struct```
+  - We can store a ```name``` into the ```struct```:  
+    ```a_person.name = “Cay Horstmann”;```
+- We can print a person’s ```city``` and ```state```:  
+  ```cout << a_person.city << “, “ << a_person.state;```  
+- We can test if a person lives in California:  
+  ```if (a_person.state == “CA”){}```
+
+#### Practice
+- Let’s design ```struct```s for:  
+  - A driver’s license from the DMV
+  - A car (as viewed when you want to get a license plate)
+  - A student (as viewed from the school)
+  - A book (as viewed by the library staff)
+
+#### Back to That ```Array```
+- Now we can create the ```array``` we wanted:  
+  ```PersonInfo client_data [10];```
+- This overcomes the drawback of parallel ```array```s
+- Now if we use ```client_data [15]``` in our code, it refers to _all_ the information for a ```client```
+- The computer is keeping it together
+  - The programmer doesn’t have to do it
