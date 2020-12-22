@@ -21,3 +21,26 @@ A picture of the game:
 - The number on the die did not tell you how many squares to move
 - Instead, it told you which card to take
 - The card told you how many squares to move
+
+#### Pointers
+- A pointer is like the die
+- A pointer doesn’t contain the data itself
+  - The die didn’t tell you how many squares to move
+- A pointer just tells you where to go to find the data
+  - You used the die to find a card in the pile
+  - Then, the card told you how to move
+
+#### Pointer = Address
+- From now on, we will think of a pointer as containing a number
+- This number can be 0, 1, 2, 3, …
+- It is not the data we need
+- It contains the address _in memory_ of the data
+- Example:  A pointer contains 6
+  - This means the data is in location 6
+
+#### Is This Like an Index into an Array?
+- Yes, it’s exactly like that
+  - The only difference is that a pointer points to actual memory, not just the cells in an array
+- If a pointer contains 0, that means _actual_ byte 0
+  - This is the very first byte in memory
+- All of Chapter 7 is about pointers
