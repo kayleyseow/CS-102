@@ -288,6 +288,7 @@ Here, we will write a function to do this:
       sum += int_array[i];
       return sum;
     }
+  }
   ```
 
 #### Example 2:
