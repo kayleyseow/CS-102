@@ -44,3 +44,34 @@ A picture of the game:
 - If a pointer contains 0, that means _actual_ byte 0
   - This is the very first byte in memory
 - All of Chapter 7 is about pointers
+
+#### Symbols to Know: Symbol 1: ```*```
+- The symbol ```*``` is used to declare a pointer variable
+- The declaration:  
+  ```double* data_ptr;```
+- means that ```data_ptr``` is a pointer to a ```double``` precision value
+- ```data_ptr``` does not actually contain a ```double``` precision value
+
+#### Symbols to Know: Symbol 2: ```&```
+- An ```&``` in front of a variable gets the address of the data contained in the variable
+- The declaration:  
+  ```double data_val;```
+- creates an actual variable ```data_val``` that can contain a ```double``` precision value
+- Then, in a program, you can code:
+  ```data_ptr = &data_val;```
+- This means to get the address of ```data_val``` and store it in ```data_ptr```
+
+#### The Word Dereference
+- The word dereference means getting or using the value a pointer points to
+
+#### Practicing with ```*``` and ```&```
+- Background:
+  ```
+  int* id_pointer;
+  int sams_id = 2515;
+  ```  
+- Now assume that ```sams_id``` is stored at location 32.
+- What is the effect of this statement?
+  ```id_pointer = &sams_id;```
+- What is the effect of this statement?
+  ```cout << *id_pointer;```
