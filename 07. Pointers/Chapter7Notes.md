@@ -75,3 +75,47 @@ A picture of the game:
   ```id_pointer = &sams_id;```
 - What is the effect of this statement?
   ```cout << *id_pointer;```
+
+#### Uninitialized Pointers
+- There is a danger here
+- When you create a pointer, you have to make sure it points to something before using it
+- What is wrong with this code?
+  ```
+  char* user_code;
+  cout << *user_code;
+  ```
+
+#### The Value ```NULL```
+- Initializing a pointer variable to ```NULL``` is a safety feature
+  - ```NULL``` is a value that points to nowhere
+- This guarantees that any references to it will not cause weird behavior
+  - Instead, references to it will cause the program to exit with an error message
+
+#### Trying to Dereference a ```NULL``` Pointer
+- I tried to run a program containing  this code
+  ```
+  char* user_code = NULL;
+  *user_code = ‘A’;
+  ```  
+- You got a pop-up box with the error message:  
+  ```a.exe stopped working```  
+
+#### Actually Using ```NULL```
+- You can use the value ```NUL```L in a program
+- You can check if a pointer is ```NULL``` before using it:  
+  ```
+  if (my_pointer == NULL)
+  {
+    //  Assign it to point to something before using it
+  }
+  else
+  {
+    // Use the pointer
+  }
+  ```
+
+#### ```NULL``` Is Only for Pointers
+- You can use ```NULL``` like any other value
+- Except that ```NULL``` is only for pointer variables
+- Typically, ```NULL``` represents some kind of error or an uninitialized pointer
+ 
