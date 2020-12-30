@@ -103,7 +103,7 @@ A picture of the game:
 #### Actually Using ```NULL```
 - You can use the value ```NUL```L in a program
 - You can check if a pointer is ```NULL``` before using it:  
-  ```
+  ```cpp  
   if (my_pointer == NULL)
   {
     //  Assign it to point to something before using it
@@ -129,3 +129,77 @@ A picture of the game:
   - The rest are actual integers
 - Each pointer needs its own ```*```
 
+#### The [accounts.cpp](https://github.com/kayleyseow/cpp-problems/blob/master/07.%20Pointers/accounts.cpp) Program  
+- This is a program from Chapter 7 that uses pointers
+- Let’s examine it
+
+#### A Note about the Program
+- Notice that by creating ```account_pointer``` as a pointer to an account (really a ```double```) we can reuse it
+- The first part of the program is for Harry’s account
+- The second part of the program is for the joint account
+
+#### A Bit of Confusion
+- What is the syntax error in this code?
+  ```cpp  
+  double joint_account = 0;
+  double* account_pointer = &joint_account;
+  account_pointer = 1000;
+  ```
+- How can we fix the code?
+
+#### Call By Value
+- Recall that, by default, C++ is call-by-value
+- Suppose we have the function ```incr (x)```:
+  ```cpp  
+  void incr (int x)
+  {
+    x++;
+  }
+  ```
+- This function does not actually increment ```x```  
+- It didn’t actually get ```x```  
+
+#### Reference Parameters
+If you code:  
+  ```cpp  
+  void incr (int &x)
+  {
+    x++;
+  }
+  ```
+- then ```x``` can be changed
+- ```x``` is called a reference parameter
+
+#### A Reference Parameter is a Pointer
+Here is a function:
+  ```cpp  
+  void withdraw (double& balance, double amount)
+  {
+    if (balance >= amount)
+    {
+      balance = balance – amount;
+    }
+  }
+  ```  
+Here is the same code using a pointer:  
+  ```cpp  
+  void withdraw (double* balance, double amount)
+  {
+    if (*balance >= amount)
+    {
+      *balance = *balance – amount;
+    }
+  }
+  ```  
+
+#### Is There Really a Difference?
+- Yes!
+- You call the first function with:  
+  ```withdraw (harrys_account, 100);```
+- and the second with:  
+  ```withdraw (&harrys_account, 100);```
+
+#### What Is the Difference?
+- It’s a question of who has to do the work—the compiler or you
+  - The compiler translates reference parameters into pointers
+- There may be other considerations
