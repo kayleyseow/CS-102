@@ -51,14 +51,14 @@ CS 102 Introduction to Programming Using C++
 - Two ways to print an ```array```
 - Assume ```int counts [10];```
 - Method 1:  
-  ```
+  ```cpp  
   for (int i=0; i<10; i++)
   {
     cout << counts [i] << endl;
   }
   ```  
 - Method 2:  
-  ```
+  ```cpp  
   int *p = counts;
   for (int i=0; i<10; i++)
   {
@@ -70,25 +70,25 @@ CS 102 Introduction to Programming Using C++
 #### More Advanced Use of ```++```, ```--```
 - The increment, decrement operators can occur inside of statements, not just on their own
 - For example, you can code:  
-  ```
+  ```cpp  
   int n = 10;
   cout << n--;
   ```
 - You can also code:  
-  ```
+  ```cpp  
   int n = 10;
   cout << --n;
   ```
 
 #### Following the Examples
 - This code:  
-  ```
+  ```cpp  
   int n = 10;
   cout << n--;
   ```
   - prints 10 and then decrements ```n```.
 - This code:
-  ```
+  ```cpp  
   int n = 10;
   cout << --n;
   ```
@@ -102,7 +102,7 @@ CS 102 Introduction to Programming Using C++
 
 #### Tracing Some Code
 What will print in the example below?  
-```
+```cpp  
 int x, y;
 x = 1;
 cout << "x = " << x << endl;
@@ -115,20 +115,20 @@ cout << "y = " << y << endl;
 ```
 
 #### Tracing Code from the Textbook
-Here's a code snippet to trace:
-```
-double sum (double* a, int size)
-{
-  double total = 0;
-  while (size-- > 0)
+- Here's a code snippet to trace:
+  ```cpp  
+  double sum (double* a, int size)
   {
-    total = total + *a++;
+    double total = 0;
+    while (size-- > 0)
+    {
+      total = total + *a++;
+    }
+    return total;
   }
-  return total;
-}
-```  
+  ```  
 - Trace the code with:  
-  ```
+  ```cpp  
   double a [3] = {15, 10, 20};
   sum (a,3);
   ```  
@@ -137,7 +137,7 @@ double sum (double* a, int size)
 
 #### A Second Example from the Textbook
 - Be careful when using ```pointers``` with local variables:  
-  ```  
+  ```cpp    
   double* firstlast (double a[], int size)  
   {
     double result [2];
@@ -219,7 +219,7 @@ double sum (double* a, int size)
 - First, we create a ```struct```
 - A ```struct``` is a way of grouping different data items together
 - An example is:  
-  ```
+  ```cpp  
   struct PersonInfo
   {
     string name;
