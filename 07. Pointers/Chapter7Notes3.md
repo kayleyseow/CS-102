@@ -45,7 +45,7 @@ CS 102 Introduction to Programming Using C++
 
 #### Back to C++
 - Take a look at this code snippet for pointers:
-  ```
+  ```cpp  
   int* int_ptr; // creates int pointer
   int_ptr = new int; // finds new space to store an int, and points to some imaginary int in memory
   *int_ptr = 100; 
@@ -78,7 +78,7 @@ CS 102 Introduction to Programming Using C++
 
 #### Pointers Again
 - A ```pointer``` can point to anything, even a ```struct```:
-  ```
+  ```cpp  
   struct PersonInfo
   {
     string name;
@@ -93,7 +93,7 @@ CS 102 Introduction to Programming Using C++
 
 #### Using the Pointer
 - ```struct``` code snippet:  
-  ```
+  ```cpp  
   Person_Info a_person;
   a_person.name = "Cay";
   ```  
