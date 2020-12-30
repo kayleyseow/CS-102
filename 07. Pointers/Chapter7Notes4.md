@@ -21,7 +21,7 @@ CS 102 Introduction to Programming Using C++
   - Contain an ```int```
   - Contain a ```pointer``` that points to the next node in the list
 - Here is an example of a node:  
-  ```
+  ```cpp  
   struct a_node
   {
     int number_of_visitors;
@@ -131,7 +131,7 @@ CS 102 Introduction to Programming Using C++
 #### Releasing the Memory Used by a ```pointer```
 - The way we release no longer needed memory is to use ```delete```
 - Here is the actual code:
-  ```
+  ```cpp  
   a_node* save_ptr = linked_list;
   // Code to actually remove the node from linked_list
   delete save_ptr;
@@ -149,7 +149,7 @@ CS 102 Introduction to Programming Using C++
 - Oftentimes, we will need to process every node in the list
   - For example, we may want to print the list
 - We use this code:
-  ```
+  ```cpp  
   a_node* temp_node = linked_list; // Visits first node
   while (temp_node != NULL)
   {
