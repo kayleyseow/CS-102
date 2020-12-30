@@ -66,7 +66,7 @@ A picture of the game:
 
 #### Practicing with ```*``` and ```&```
 - Background:
-  ```
+  ```cpp  
   int* id_pointer;
   int sams_id = 2515;
   ```  
@@ -80,7 +80,7 @@ A picture of the game:
 - There is a danger here
 - When you create a pointer, you have to make sure it points to something before using it
 - What is wrong with this code?
-  ```
+  ```cpp  
   char* user_code;
   cout << *user_code;
   ```
@@ -93,7 +93,7 @@ A picture of the game:
 
 #### Trying to Dereference a ```NULL``` Pointer
 - I tried to run a program containing  this code
-  ```
+  ```cpp  
   char* user_code = NULL;
   *user_code = ‘A’;
   ```  
