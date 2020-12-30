@@ -118,4 +118,14 @@ A picture of the game:
 - You can use ```NULL``` like any other value
 - Except that ```NULL``` is only for pointer variables
 - Typically, ```NULL``` represents some kind of error or an uninitialized pointer
- 
+
+#### Tricky Coding — Avoid This
+- It’s common to declare multiple variables on one line:  
+  ```int client_count = 0, file_count = 0, user_count = 0;```  
+- Be careful if you do that with pointer variables
+- This code is deceptive:  
+  ```int *pointer1, pointer2, pointer3;```
+- Only ```pointer1``` is a pointer to an ```int```
+  - The rest are actual integers
+- Each pointer needs its own ```*```
+
