@@ -17,7 +17,7 @@ CS 102 Introduction to Programming Using C++
   
 #### Bytes — The Way We View Data
 - A byte on a PC is made up of 8 bits
-- A byta can hold a letter or a small number or any single character
+- A byte can hold a letter or a small number or any single character
   - Even a byte is too small for numbers in some cases
 - A programmer thinks of storage as a long list of bytes
   - Think of it as an `array` of bytes
@@ -39,7 +39,7 @@ CS 102 Introduction to Programming Using C++
     - A .cpp file is a text file
 
 #### Working with Data
-- We think of data as flowing in a stram
+- We think of data as flowing in a stream
 - This is like ducks in the children's pond game
 - The ducks float around past a person
 - The person can examine them as they come by
@@ -90,3 +90,100 @@ CS 102 Introduction to Programming Using C++
   ```
 
 #### A Simple File Program: Echoing a File
+An Example of File Echoing:
+  ```cpp
+  #include <iostream>
+  #include <fstream>
+  using namespace std;
+  int main()
+  {
+    ifstream data_file;
+    data_file.open ("\\cs102\\programs\\lab8-1.dat");
+    string input_line;
+    while (getline(data_file,input_line))
+    {
+    }
+  }
+  ```
+
+#### An example to Process a File
+- This is Program chap08/babynames.cpp from page 356
+- Here is background information for the program
+- There is a data file of 1000 records, each containing a boy's name and a girl's name
+- The data was collected by the Social Security Administration
+
+#### The Goal
+- Looking through the list, someone noticed that there was a wider range of names given to girls than boys
+- The person wondered if that were really true
+- Or did it just seem to be true?
+- If it was true, that would cause each girl's name to get a smaller percentage
+- A program was written to test that idea
+
+#### Implementation
+
+#### Examining the Program
+- Notice that the program uses the function pricess_name()
+  - The function has a parameter that is a stream parameter
+  - The stream parameter is a reference parameter (preceded by an `&`)
+- You have to do this for any stream variable because it gets modified on a read or write
+- Let's examine the program!
+- babynames program:
+  ```cpp
+  // sec01/babynames.cpp
+  #include <iostream>
+  #include <fstream>
+  #include <string>
+  using namespace std;
+  /**
+  Reads name information, prints the name if total >= 0, and
+  adjusts the total.
+  @param in_file the input stream
+  @param total the total percentage that should still be processed
+  */
+  void process_name(ifstream& in_file, double& total)
+  {
+    string name;
+    int count;
+    double percent;
+    in_file >> name >> count >> percent;
+    // Check for failure after each input
+    if (in_file.fail())
+    { 
+      return;
+    }
+    if (total > 0)
+    {
+      cout << name << " ";
+    }
+    total = total - percent;
+  }
+  int main()
+  {
+    ifstream in_file;
+    in_file.open("babynames.txt");
+    // Check for failure after opening
+    if (in_file.fail())
+    {
+      return 0;
+    }
+    double boy_total = 50;
+    double girl_total = 50;
+    while (boy_total > 0 || girl_total > 0)
+    {
+      int rank;
+      in_file >> rank;
+      if (in_file.fail()){
+        return 0;
+      }
+    cout << rank << " ";
+    process_name(in_file, boy_total);
+    process_name(in_file, girl_total);
+    cout << endl;
+    }
+    return 0;
+  }
+  ```
+
+#### Some Vocabulary
+The combination
+extraction operator
