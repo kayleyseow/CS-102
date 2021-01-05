@@ -115,4 +115,24 @@ CS 102 Introduction to Programming Using C++
   - `caesar input.txt encrypt.txt`  
   - `caesar -d encrypt.txt output.txt`  
 
-#### 
+#### A Caesar Cipher
+- There are many ways to encrypt data
+- One way is the Caesar cipher
+- It replaces every letter with the letter k letters after it
+  - For example, suppose k = 5
+  - Then it changes a to f, b to g, c to h, etc.
+- When you reach the end of the alphabet, you start over
+  - So, in the example the cipher changes u to z, v to a, w to b, etc.
+- You can think of the letters as being on two cylinders, side by side, and you rotate the cylinders
+- This is a very simple code
+- It is very easy to decipher
+- It is not really used
+
+#### The Textbook's Version
+- In the textbook's version, they don't reat the alphabet as ebing on a cylinder
+- They just subtract 3 from each letter's ASCII code
+- In ASCII, 'A' is 65, 'B' - 66, etc.
+- Also, 'a' = 97, 'b' = 98, etc.
+
+#### Other Notes about the Program
+- You should always pay attention to, and add these ideas to your code
