@@ -12,7 +12,7 @@ CS 102 Introduction to Programming Using C++
 - Let's write some numeric data to a file
 - We have the same problem we had back in Chapter 6 for arrays
   - We need a separator
-- Ths difference now
+- This difference now
 
 #### Reading that File
 - What if you wanted to read in the file?
@@ -93,7 +93,7 @@ CS 102 Introduction to Programming Using C++
   - `dir /p`
   - `dir /?`
 
-#### Using Arduments with Our Own Programs 
+#### Using Arguments with Our Own Programs 
 - To get the arguments, you have to call `main()` differently:
   `int main ()`
 
@@ -108,7 +108,7 @@ CS 102 Introduction to Programming Using C++
 
 #### The Textbook's Example
 - The textbook has an example of an encryption/decryption program
-- The program assumes you want tot encrypt a file
+- The program assumes you want to encrypt a file
   - This is the default
 - If you want to decrypt a file, you use the `-d` argument
 - Here are two examples:  
@@ -129,7 +129,7 @@ CS 102 Introduction to Programming Using C++
 - It is not really used
 
 #### The Textbook's Version
-- In the textbook's version, they don't reat the alphabet as ebing on a cylinder
+- In the textbook's version, they don't read the alphabet as being on a cylinder
 - They just subtract 3 from each letter's ASCII code
 - In ASCII, 'A' is 65, 'B' - 66, etc.
 - Also, 'a' = 97, 'b' = 98, etc.
