@@ -136,3 +136,68 @@ CS 102 Introduction to Programming Using C++
 
 #### Other Notes about the Program
 - You should always pay attention to, and add these ideas to your code
+
+#### The `get` Command
+
+#### Another Advantage of the Command Prompt
+- The command prompt can also be used to direct input and output
+- You can send your output to a file instead of the screen
+- You can get input from a file instead of the keyboard
+- There is a third option, allowing the output of one program to be the input of the next
+
+#### Redirecting Output
+- To redirect output, use `>`
+- For example:  
+  - The `dir` command lists the files in the current directory  
+- You can redirect the output to a file
+- To send the output to a file instead of the streen, use:  
+  `dir>dirlist`
+- You can now use the file `dirlist` like any other file
+
+#### Redirecting Input
+- To redirect input, use `<`
+- For example:
+  - The `more` command echoes a program
+  - You can get input from a file using `more`
+
+#### The Pipe
+- The last way to redirect input and output is to use the output of one program as input to another
+- This is accomplished using the vertical bar, the "pipe": `|`
+- If you have a folder with many files, you can use the `dir` command to list them
+- All that output goes by too fast
+  - You can "pipe" this to the `more` command to see the list a screenful at a time
+  - To do this, use:  
+    `dir | more` 
+- Use `more` when you do not want to save the file
+
+#### Connecting this to C++
+- By using `cout` and `cin`, you enable this
+- For example, here is a program:  
+  ```cpp  
+  #include <iostream>
+  #include <fstream>
+  using namespace std;
+  int main()
+  {
+    string input_line;
+    while (getline (cin, input_line))
+    {
+      cout << input_line <<endl;
+    }
+    return 0;
+  }
+  ```  
+
+#### Using the Program
+- Here are several examples
+- To print a file on the screen:  
+  `a < filename`
+- To type something and store it into a file:  
+  `a > filename`
+- To copy one file to another:  
+  `a < firstfile > secondfile`
+- You can come up with other examples
+- `cin` gets its input from standard input, which is abbreviated to `stdin`
+- `cout` sends its output to standard output, which is abbreviated to `stdout`
+
+#### 
