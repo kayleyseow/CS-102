@@ -17,7 +17,7 @@ CS 102 Introduction to Programming Using C++
 - They are slow to access, unless you want to access every record in order
 - It is painful to change a sequential access file
   - To do that, you have to recreate the file
-- The only disadvantage of sequential access files is that there is a lack of speed while accessing and you cannot easily chage the data in the file
+- The only disadvantage of sequential access files is that there is a lack of speed while accessing and you cannot easily change the data in the file
 - However, they allow variable length/size records, and ease of use (easy to make using notepad, word processor) 
 
 #### Random Access Files with Uniform Data Records
@@ -42,8 +42,11 @@ CS 102 Introduction to Programming Using C++
   `#include <fstream>`
   
 #### Reading Records from a Random Access File
-- You can use read:
+- You can use read:  
   `file_var.read(&variable, number_of_bytes);`
+  - variable is a reference since it will be changed by the read
+  - `number_of_bytes` is the number of bytes to read
+- Usually, reading and writing is done with a `struct`
 
 #### The `sizeof` Function
 - You can use `sizeof()` to get the number of bytes in a data item
@@ -93,4 +96,42 @@ CS 102 Introduction to Programming Using C++
 - To get ready to read the nth record, you need to move to the correct byte:  
   `random_file.seekg((n-1)*15);`
 
-#### 
+#### An Easy Error
+- There is a “longer” integer
+- It has more bytes than a regular integer
+- You should use it for `seekg`
+- A good way to do this is to declare the record size as `long` instead of `int`
+- Also, `seekg` is usually called like this:  
+  ```cpp  
+	const rec_size = sizeof (Data);
+	random_file.seekg ((rec_num-1)* rec_size);
+  ```  
+
+#### Binary Files
+- Random access files are most often a kind of binary file
+- Another kind of binary file is a file where the early bytes in the file tell the record size and perhaps the record offset
+  - An example of this is a .bmp file
+  - A .bmp file is essentially a screen image
+    - That means the file is a “picture” of data on the screen
+
+#### Random Access Files-Type 2
+- Let’s examine the .bmp file structure
+- There is a “header” record
+  - It occupies the beginning bytes
+  - It describes the file
+  - It tells where the picture data can be found and how long and wide the picture is
+
+#### Working with a .bmp File
+- The header record tells what the file looks like
+  - Bytes 2-5:  The size of this file in bytes
+  - Bytes 10-13:  The start of the picture data
+  - Bytes 18-21:  The width of the picture in pixels
+  - Bytes 22-25:  The height of the picture in pixels
+- There is more information in the header, but we will use only these bytes
+- Also, you could set up a `struct` to hold this information
+
+#### A Sample .bmp Program
+- The program imagemod.cpp on p. 375 creates a “negative” of a bitmap file
+- Let’s examine the program
+- The original data file is Russian letters.bmp
+- The negative of the image the original file is in the file Russian letters (negative).bmp
