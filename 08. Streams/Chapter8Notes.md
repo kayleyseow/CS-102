@@ -9,11 +9,17 @@ CS 102 Introduction to Programming Using C++
   - Everything happens in primary storage
   - Where is my program while it's running?
 - Computers also have secondary storage
-  - It is also called
+  - It is also called permanent storage
+  - Examples: Hard drive, CD, DVD, Flash drive
   
 #### A Deep Look into Storage
 - All data is stored in bits
-  - This is true, for memory, a CD or DVD, a flash drive, a 
+  - This is true, for memory, a CD or DVD, a flash drive, a hard drive
+- A Bit (**BI**nary digi**T**) is a switch
+- It can be off (0) or on (1)
+- A bit is too small to be useful
+  - It’s so small that the computer can’t even access one bit in storage at a time!
+- Bits are combined into bytes
   
 #### Bytes — The Way We View Data
 - A byte on a PC is made up of 8 bits
@@ -71,22 +77,24 @@ CS 102 Introduction to Programming Using C++
 
 #### Reading the File
 - Reading from a file is like reading from the keyboard using ```cin```
-- Instead of `cin`, use the file variable
+- Instead of `cin`, use the file variable:  
   ```cpp
   string a_line;
   data_file >> a_line;
   ```  
-- To read several
+- To read several variables, use:  
+  `data_file  >>  line_1  >>  line_2;`
+- Just like with `cin`, this reads a word at a time
 
 #### Reading an Entire Line from a File
-- Use the `getline()` function to read an entire line
+- Use the `getline()` function to read an entire line:  
   ```cpp  
   string input_line;
   getline(data_file, input_line);
   ```
-- You can even use `getline()` to cause `cin` to read an entire line
+- You can even use `getline()` to cause `cin` to read an entire line:  
   ```cpp  
-  example
+  getline (cin, string_variable);
   ```
 
 #### A Simple File Program: Echoing a File
@@ -102,15 +110,22 @@ An Example of File Echoing:
     string input_line;
     while (getline(data_file,input_line))
     {
+      cout << input_line << endl;
     }
+    return 0;
   }
   ```
 
-#### An example to Process a File
+#### An Example to Process a File
 - This is Program chap08/babynames.cpp from page 356
 - Here is background information for the program
 - There is a data file of 1000 records, each containing a boy's name and a girl's name
-- The data was collected by the Social Security Administration
+- The data was collected by the Social Security Administration and show names from the 1990s
+- Each line (record) contains two identical sub-records
+  - There is a rank 
+  - Then the line contains information about a boy’s name
+    - The name, the number and percentage of people given that name
+  - Then the line contains the same information for girls’ names
 
 #### The Goal
 - Looking through the list, someone noticed that there was a wider range of names given to girls than boys
@@ -120,9 +135,14 @@ An Example of File Echoing:
 - A program was written to test that idea
 
 #### Implementation
+- We will check that idea for the top 50% of the people
+- One way to check for the top 50% would be to add up the frequencies (percentages)
+  - You stop when they add up to 50%
+- Another way would be to start at 50% and subtract the percents
+  - In this case, you stop when you get to 0
 
 #### Examining the Program
-- Notice that the program uses the function pricess_name()
+- Notice that the program uses the function `pricess_name()`
   - The function has a parameter that is a stream parameter
   - The stream parameter is a reference parameter (preceded by an `&`)
 - You have to do this for any stream variable because it gets modified on a read or write
@@ -183,7 +203,19 @@ An Example of File Echoing:
     return 0;
   }
   ```
+#### A Final Note: Typing in a File Name
+- If you read a file name as a `string`, it gets read in as a C++ `string`
+- You then need to convert it to a Cstring
+  - You do that with the member function `c_str`
+- An example of reading the file:
+  ```cpp  
+  cout  <<  "Type the file name: "
+  string file_name;
+  cin >> file_name;
+  ifstream in_file;
+  in_file.open (file_name.c_str ());
+  ```
 
 #### Some Vocabulary
-The combination
-extraction operator
+- The combination `<<` in `cout` is called an insertion operator
+- The combination `>>` in `cin` is called an extraction operator
