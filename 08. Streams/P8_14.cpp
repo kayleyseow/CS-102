@@ -12,7 +12,7 @@ using namespace std;
 int main()
 {
     string file_name;
-    cout << "Type the file name: ";
+    cout << "Type the file name: \n";
     cin >> file_name;
     ifstream in_file;
     in_file.open(file_name.c_str());
@@ -33,6 +33,6 @@ int main()
             characters += in_word.size();
         }
     }
-    cout << "There are " << characters << " characters, " << words << "words, and " << lines << " lines in this file.\n";
+    cout << "There are " << characters << " characters, " << words << " words, and " << lines << " lines in this file.\n";
     return 0;
 }
