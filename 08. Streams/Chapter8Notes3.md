@@ -33,7 +33,7 @@ CS 102 Introduction to Programming Using C++
   fstream random_file;
   random_file.open(filename, status);
   ```
-  - Status should be one of `ios::in`, `ios::out`, or `ios::binary``
+  - Status should be one of `ios::in`, `ios::out`, or `ios::binary`
   - `ios` stands for input/output status
   - It should be more than one, separated by `|`
 - How to open the file:  
