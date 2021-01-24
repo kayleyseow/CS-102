@@ -1,5 +1,5 @@
-# CS-102: Introduction to Computer Programming Using C++
-**Coursework for the CS-102 Class.**
+# CS-102
+**Coursework for the CS-102: Introduction to Computer Programming Using C++ Class.**
 ### Before you go any further, please read the repository's [license](https://github.com/kayleyseow/CS-102/blob/master/LICENSE.md). If there is anything I want you to take away from reading the license, it should be this.
 > **please DO NOT copy my work — it will do nothing more than harm you in the long run. Simply put, it is not the right way to learn how to code.**
 
@@ -19,7 +19,7 @@ This repository has my complete coursework for the CS-102: Introduction to Compu
 - [Final](https://github.com/kayleyseow/CS-102/tree/master/Final): Material pertaining to the course final.
 
 ## Commit Guide
-**I used different emojis on my commits to this repository in order to classify my files and make it easier to find. Here is a guide to them and what they signify.**
+**I used different emojis on my commits to this repository in order to classify my files and make them easier to find. Here is a guide to them and what they signify.**
 - 📄 - Class Files: Presentations, Review Notes, and Study Guides.
 - 📓 - Notes: Class Notes, Review Notes, and Study Guide Notes.
 - 📝 - Written Assignments: Written Homework and In-Class Assignments.
