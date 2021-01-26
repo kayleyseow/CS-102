@@ -19,7 +19,7 @@ This repository has my complete coursework for the CS-102: Introduction to Compu
 - [Final](https://github.com/kayleyseow/CS-102/tree/master/Final): Material pertaining to the course final.
 
 ## Commit Guide
-**I used different emojis on my commits to this repository in order to classify my files and make them easier to find. Here is a guide to them and what they signify.**
+**I used different emojis to label my commits in order to classify my files and make them easier to find. Here is a guide to them and what they signify.**
 - 📄 - Class Files: Presentations, Review Notes, and Study Guides.
 - 📓 - Notes: Class Notes, Review Notes, and Study Guide Notes.
 - 📝 - Written Assignments: Written Homework and In-Class Assignments.
